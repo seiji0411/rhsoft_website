@@ -10,20 +10,17 @@ import { CallPopup } from "@/components/call-popup"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Roop Glass Solution - Premium Glass Solutions",
-  description: "Professional glass installation, repair, and custom solutions for residential and commercial spaces. Glass Facade, ACP Cladding Work, Glass Work, Glass Railing, Unitized System, and more.",
+  title: "RhSoft - Software Development Company",
+  description: "RhSoft is a software development company that provides custom software solutions for businesses.",
   keywords: [
-    "glass facade",
-    "acp cladding work",
-    "glass work",
-    "glass railing",
-    "unitized system",
-    "glass partition",
-    "glass installation",
-    "commercial glass",
-    "residential glass",
-    "custom glass solutions",
-    "roopglass"
+    "software development",
+    "custom software solutions",
+    "software development company",
+    "software development services",
+    "software development agency",
+    "software development company",
+    "software development services",
+    "software development agency",
   ].join(", ")
 }
 
@@ -36,8 +33,8 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.png" />
-        <meta name="description" content="Professional glass installation, repair, and custom solutions for residential and commercial spaces. Glass Facade, ACP Cladding Work, Glass Work, Glass Railing, Unitized System, and more." />
-        <meta name="keywords" content="glass facade, acp cladding work, glass work, glass railing, unitized system, glass partition, glass installation, commercial glass, residential glass, custom glass solutions, roopglass" />
+        <meta name="description" content="RHSoft is a software development company that provides custom software solutions for businesses." />
+        <meta name="keywords" content="software development, custom software solutions, software development company, software development services, software development agency, software development company, software development services, software development agency" />
         {/* Google tag (gtag.js) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-7CBBF8YY45"></script>
         <script dangerouslySetInnerHTML={{

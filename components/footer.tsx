@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Facebook, Twitter, Instagram, Linkedin, Phone, Mail, MapPin, Clock } from "lucide-react"
+import { Facebook, Twitter, Instagram, Linkedin, Phone, Mail, MapPin, Clock, Github } from "lucide-react"
 
 export function Footer() {
   return (
@@ -12,13 +12,13 @@ export function Footer() {
           <div>
             <div className="flex items-center space-x-2 mb-6">
               <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">RG</span>
+                <span className="text-white font-bold text-sm">RH</span>
               </div>
-              <span className="text-xl font-bold">RoopGlass</span>
+              <span className="text-xl font-bold">RhSoft</span>
             </div>
             <p className="text-slate-300 mb-6">
-              Premium glass solutions for residential and commercial spaces. Transforming visions into reality with
-              expert craftsmanship and innovative designs.
+              RHSoft is a software development company that provides custom software solutions for businesses. Transforming visions into reality with
+              expert craftsmanship and innovative software solutions.
             </p>
             <div className="flex space-x-4">
               <Button size="icon" variant="ghost" className="hover:bg-blue-600">
@@ -32,6 +32,9 @@ export function Footer() {
               </Button>
               <Button size="icon" variant="ghost" className="hover:bg-blue-600">
                 <Linkedin className="w-5 h-5" />
+              </Button>
+              <Button size="icon" variant="ghost" className="hover:bg-blue-600">
+                <Github className="w-5 h-5" />
               </Button>
             </div>
           </div>
@@ -107,17 +110,16 @@ export function Footer() {
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-slate-300">A1 Business Center, 2nd Floor, Sundar Kapoor Compound,</p>
-                  <p className="text-slate-300">Opp Thakur Mall, Dahisar Check Nakka, Mumbai-401107.</p>
+                  <p className="text-slate-300">142 W 36th St, New York, NY 10001</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-blue-400 flex-shrink-0" />
-                <p className="text-slate-300">+91 9320008279</p>
+                <p className="text-slate-300">+1 (929) 563-6548</p>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-blue-400 flex-shrink-0" />
-                <p className="text-slate-300">roopglass@gmail.com</p>
+                <p className="text-slate-300">info@rhsoft.com</p>
               </div>
               <div className="flex items-start space-x-3">
                 <Clock className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
@@ -150,7 +152,7 @@ export function Footer() {
 
         {/* Bottom */}
         <div className="border-t border-slate-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-slate-400 text-sm">© 2025 RoopGlassSolution. All rights reserved.</p>
+          <p className="text-slate-400 text-sm">© 2026 RhSoft. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="/privacy" className="text-slate-400 hover:text-white text-sm transition-colors">
               Privacy Policy

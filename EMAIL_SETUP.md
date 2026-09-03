@@ -17,16 +17,16 @@ Create a `.env.local` file in your project root and add:
 # Hostinger SMTP Configuration
 SMTP_HOST=smtp.hostinger.com
 SMTP_PORT=465
-SMTP_USER=infoy@roopglass.com
+SMTP_USER=infoy@rhsoft.com
 SMTP_PASS=Anshul@1832004
 
 # Email Configuration
-FROM_EMAIL=info@roopglass.com
-CONTACT_EMAIL=info@roopglass.com
-SALES_EMAIL=info@roopglass.com
+FROM_EMAIL=info@rhsoft.com
+CONTACT_EMAIL=info@rhsoft.com
+SALES_EMAIL=info@rhsoft.com
 
 # Site Configuration
-NEXT_PUBLIC_SITE_URL=https://www.roopglass.com
+NEXT_PUBLIC_SITE_URL=https://www.rhsoft.com
 \`\`\`
 
 ## 3. Update Email Sending Logic

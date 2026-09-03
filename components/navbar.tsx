@@ -42,11 +42,11 @@ export function Navbar() {
             <Link href="/" className="flex items-center space-x-2">
             <img
               src={logo.src}
-              alt="Roop Glass Solutions Logo"
+              alt="RhSoft Logo"
               className="w-12 h-11 object-contain"
             />
             <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              Roop Glass Solutions
+              RhSoft
             </span>
             </Link>
 
@@ -65,10 +65,11 @@ export function Navbar() {
 
           {/* Right side */}
           <div className="hidden md:flex items-center space-x-4">
-            <div className="flex items-center space-x-2 text-sm text-slate-600 dark:text-slate-400">
+            {/* Disabled Phone Number for now */}
+            {/* <div className="flex items-center space-x-2 text-sm text-slate-600 dark:text-slate-400">
               <Phone className="w-4 h-4" />
               <span>+91 9320008279</span>
-            </div>
+            </div> */}
             <ThemeToggle />
             <Button
               asChild

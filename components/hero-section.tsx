@@ -8,28 +8,25 @@ import Link from "next/link"
 
 const slides = [
   {
-    title: "Glass Facade",
-    subtitle: "Transforming Spaces with Modern Elegance",
-    description: "We specialize in high-performance glass facade systems that enhance aesthetics, maximize natural light, etc. From Commercial to Residential, our facade work are engineered for durability, style, and functionality.",
-    image: "/images/glassFacade.png?height=600&width=800", // replace with actual image path
-    cta: "View Our Services"
-
+    title: "Web Development",
+    subtitle: "APIs and Platforms That Scale",
+    description: "We design and build reliable web services — from REST and GraphQL APIs to backend platforms that connect your products, partners, and customers. Secure, documented, and ready to grow with you.",
+    image: "/assets/hero.jpg",
+    cta: "View Our Services",
   },
   {
-    title: "Glass Railings",
-    subtitle: "Sleek, Safe, and Stylish",
-    description: "Our premium glass railings offer a seamless blend of safety and sophistication. Designed for both indoor and outdoor spaces, they provide unobstructed views while maintaining structural strength and elegance. Ideal for balconies, staircases, terraces, and pool areas.",
-    image: "/images/glassRailing.png?height=600&width=800", // Replace with actual image path
-    cta: "View Our Portfolio"
-
+    title: "Blockchain & AI",
+    subtitle: "Intelligent Systems on Trusted Infrastructure",
+    description: "We build blockchain applications and AI-powered products — from smart contracts and decentralized platforms to machine learning models that automate decisions and unlock new capabilities.",
+    image: "/assets/hero.jpg",
+    cta: "View Our Portfolio",
   },
   {
-    title: "Glass Partitions",
-    subtitle: "Elegant & Modern Space Dividers",
-    description: "Transform your interiors with sleek glass partitions — ideal for offices, homes, and commercial spaces. Stylish, durable, and customized to your needs.",
-    image: "/images/glassPartition.png?height=800&width=800", // Replace with actual image path if available
+    title: "Product Engineering",
+    subtitle: "From Idea to Production",
+    description: "Partner with us to turn a concept into a production-ready product. We cover strategy, design, development, and ongoing support so you can ship with confidence.",
+    image: "/assets/hero.jpg",
     cta: "Get Quote",
-
   },
 ]
 
@@ -108,7 +105,7 @@ export function HeroSection() {
               <div className="text-center">
                 <div className="flex items-center justify-center mb-2">
                   <Award className="w-6 h-6 text-blue-500 mr-2" />
-                  <span className="text-2xl font-bold text-slate-900 dark:text-white">20+</span>
+                  <span className="text-2xl font-bold text-slate-900 dark:text-white">9+</span>
                 </div>
                 <p className="text-sm text-slate-600 dark:text-slate-400">Years Experience</p>
               </div>

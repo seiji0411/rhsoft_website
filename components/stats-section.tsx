@@ -7,7 +7,7 @@ import { Award, Users, Clock, Star } from "lucide-react"
 const stats = [
   {
     icon: Award,
-    value: 20,
+    value: 9,
     suffix: "+",
     label: "Years Experience",
     description: "Serving customers with excellence",

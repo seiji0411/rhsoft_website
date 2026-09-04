@@ -94,7 +94,7 @@ export function ServicesSection() {
             </span>
           </h2>
           <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-            Comprehensive glass solutions for every need, from residential to commercial projects
+            End-to-end software development for every need, from web services to blockchain, AI, and product engineering
           </p>
         </div>
 

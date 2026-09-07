@@ -44,7 +44,7 @@ export default function TermsPage() {
         <section>
           <h2 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">Contact</h2>
           <p>
-            For questions about these terms, email rhsoft@gmail.com or call +1 (213) 545-1265.
+            For questions about these terms, email seijiito1102@gmail.com or call +1 (213) 545-1265.
           </p>
         </section>
       </div>

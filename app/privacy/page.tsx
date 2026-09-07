@@ -46,7 +46,7 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">Contact</h2>
           <p>
-            For privacy-related questions, contact us at rhsoft@gmail.com or call +1 (213) 545-1265.
+            For privacy-related questions, contact us at seijiito1102@gmail.com or call +1 (213) 545-1265.
           </p>
         </section>
       </div>

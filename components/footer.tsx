@@ -69,33 +69,28 @@ export function Footer() {
             <h3 className="text-lg font-semibold mb-6">Services</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/services" className="text-slate-300 hover:text-white transition-colors">
-                  Glass Facade
+                <Link href="/services#ai" className="text-slate-300 hover:text-white transition-colors">
+                  AI
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-slate-300 hover:text-white transition-colors">
-                  Glass Railing
+                <Link href="/services#blockchain" className="text-slate-300 hover:text-white transition-colors">
+                  Blockchain
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-slate-300 hover:text-white transition-colors">
-                  Glass Partition
+                <Link href="/services#web" className="text-slate-300 hover:text-white transition-colors">
+                  Web
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-slate-300 hover:text-white transition-colors">
-                  ACP Panel
+                <Link href="/services#ecommerce" className="text-slate-300 hover:text-white transition-colors">
+                  E-commerce
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-slate-300 hover:text-white transition-colors">
-                  Glass Roofing
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="text-slate-300 hover:text-white transition-colors">
-                  Glass Installation
+                <Link href="/services#mobile" className="text-slate-300 hover:text-white transition-colors">
+                  Mobile
                 </Link>
               </li>
             </ul>
@@ -108,7 +103,7 @@ export function Footer() {
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-brand-300 mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-slate-300">142 W 36th St, New York, NY 10001</p>
+                  <p className="text-slate-300"> 2330 El Camino Real, Tustin, CA 92782</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
@@ -117,7 +112,7 @@ export function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-brand-300 flex-shrink-0" />
-                <p className="text-slate-300">info@rhsoft.com</p>
+                <p className="text-slate-300">seijiito1102@gmail.com</p>
               </div>
               <div className="flex items-start space-x-3">
                 <Clock className="w-5 h-5 text-brand-300 mt-1 flex-shrink-0" />
@@ -130,7 +125,7 @@ export function Footer() {
         </div>
 
         {/* Newsletter */}
-        <div className="border-t border-white/10 mt-12 pt-8">
+        {/* <div className="border-t border-white/10 mt-12 pt-8">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-lg font-semibold mb-2">Stay Updated</h3>
@@ -146,7 +141,7 @@ export function Footer() {
               </Button>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Bottom */}
         <div className="border-t border-white/10 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">

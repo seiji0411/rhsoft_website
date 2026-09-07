@@ -31,7 +31,7 @@ export function CTASection() {
                   Call Now: +1 (213) 545-1265
                 </a>
               </Button>
-              <Button
+              {/* <Button
                 asChild
                 size="lg"
                 variant="outline"
@@ -42,7 +42,7 @@ export function CTASection() {
                   Get Free Quote
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
-              </Button>
+              </Button> */}
             </div>
 
             <div className="grid md:grid-cols-3 gap-8 text-center">
@@ -59,7 +59,7 @@ export function CTASection() {
                   <Mail className="w-8 h-8" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Email Us</h3>
-                <p className="opacity-90">rhsoft@gmail.com</p>
+                <p className="opacity-90">seijiito1102@gmail.com</p>
                 <p className="text-sm opacity-75">Quick response guaranteed</p>
               </div>
               <div>

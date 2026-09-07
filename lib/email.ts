@@ -78,9 +78,9 @@ interface QuoteData {
   preferredDate?: string
 }
 
-const FROM_EMAIL = process.env.FROM_EMAIL || "info@rhsoft.com"
-const CONTACT_EMAIL = process.env.CONTACT_EMAIL || "info@rhsoft.com"
-const SALES_EMAIL = process.env.SALES_EMAIL || "info@rhsoft.com"
+const FROM_EMAIL = process.env.FROM_EMAIL || "seijiito1102@gmail.com"
+const CONTACT_EMAIL = process.env.CONTACT_EMAIL || "seijiito1102@gmail.com"
+const SALES_EMAIL = process.env.SALES_EMAIL || "seijiito1102@gmail.com"
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://rhsoft.com"
 
 export async function sendContactNotification(data: ContactData): Promise<EmailResult> {
@@ -249,7 +249,7 @@ function generateContactConfirmationHTML(firstName: string): string {
           <div class="contact-info">
             <h3>Need immediate assistance?</h3>
             <p><strong>📱 Call us:</strong> +1 (213) 545-1265</p>
-            <p><strong>📧 Email:</strong> rhsoft@gmail.com</p>
+            <p><strong>📧 Email:</strong> seijiito1102@gmail.com</p>
             <p><strong>🕒 Hours:</strong> 24hr</p>
           </div>
           
@@ -445,7 +445,7 @@ function generateQuoteConfirmationHTML(firstName: string, quoteId: string): stri
           <div class="contact-info">
             <h3>Questions or urgent requirements?</h3>
             <p><strong>📱 Call us:</strong> +1 (213) 545-1265</p>
-            <p><strong>📧 Email:</strong> info@rhsoft.com</p>
+            <p><strong>📧 Email:</strong> seijiito1102@gmail.com</p>
             <p><strong>💬 Reference:</strong> Quote ID ${quoteId}</p>
           </div>
           
@@ -489,7 +489,7 @@ We have received your message and will get back to you within 24 hours.
 
 For immediate assistance:
 Phone: +1 (213) 545-1265
-Email: rhsoft@gmail.com
+Email: seijiito1102@gmail.com
 
 Best regards,
 The RhSoft Team
@@ -542,7 +542,7 @@ Timeline:
 
 Questions? Contact us:
 Phone: +1 (213) 545-1265
-Email: info@rhsoft.com
+Email: seijiito1102@gmail.com
 Reference: Quote ID ${quoteId}
 
 Best regards,

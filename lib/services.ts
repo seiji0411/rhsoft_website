@@ -19,6 +19,7 @@ export const services: Service[] = [
       "Intelligent automation",
       "AI-powered product features",
     ],
+    popular: true,
   },
   {
     slug: "blockchain",
@@ -26,7 +27,6 @@ export const services: Service[] = [
     image: "/assets/services/service-blockchain.png",
     description: "Secure on-chain applications, from smart contracts and DeFi to NFT platforms and token bridges.",
     features: ["Smart contracts (Solidity & Rust)", "DApps, DeFi, and DEX", "NFT marketplaces and minting", "Token bridges and staking"],
-    popular: true,
   },
   {
     slug: "web",

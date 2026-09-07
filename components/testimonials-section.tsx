@@ -6,58 +6,62 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
-const testimonials = 
-  [
-    {
-      id: 1,
-      name: "Architect Mr. Garg",
-      role: "Architect",
-      location: "Navi Mumbai",
-      avatar: "/placeholder.svg?height=60&width=60",
-      rating: 5,
-      text: "RhSoft successfully executed ACP facade and glass work for our Navi Mumbai Maha Nagar Palika projects. Highly professional and reliable!",
-      project: "ACP Facade & Glass Work",
-    },
-    {
-      id: 2,
-      name: "R.K. Agrawal",
-      role: "Admin Head",
-      location: "Gorai, Mumbai",
-      avatar: "/placeholder.svg?height=60&width=60",
-      rating: 5,
-      text: "RhSoft delivered exceptional interior glass work for the Global Pagoda Vipassana Gallery. Truly enhanced the spiritual ambiance of the space.",
-      project: "Tourist Attraction & Meditation Center",
-    },
-    {
-      id: 3,
-      name: "Mr. Uday Metkar – Delta Tect Engineering",
-      role: "Admin Head",
-      location: "Mumbai",
-      avatar: "/placeholder.svg?height=60&width=60",
-      rating: 5,
-      text: "Glass facade work for high-rise buildings is challenging, but RhSoft handled it with precision and expertise. The quality and finish exceeded expectations.",
-      project: "Glass Facade",
-    },
-    {
-      id: 4,
-      name: "Dilip Mewada & Associates",
-      role: "Owner",
-      location: "Mumbai",
-      avatar: "/placeholder.svg?height=60&width=60",
-      rating: 5,
-      text: "The glass partitions installed by RhSoft gave our restaurant a modern, open, and welcoming atmosphere. Our customers love the new vibe!",
-      project: "Glass Facade Work",
-    }
-    // {
-    //   id: 5,
-    //   name: "Vikram Singh",
-    //   role: "Architect",
-    //   location: "Mumbai",
-    //   avatar: "/placeholder.svg?height=60&width=60",
-    //   rating: 5,
-    //   text: "RhSoft brings architectural visions to life with precision. Their innovative glass solutions and technical expertise make them an invaluable partner in our projects.",
-    //   project: "Luxury Villa Design",
-    // },
+const testimonials = [
+  {
+    id: 1,
+    name: "Priya Nair",
+    role: "Head of Product",
+    location: "Singapore",
+    avatar: "/placeholder.svg?height=60&width=60",
+    rating: 5,
+    service: "AI",
+    text: "RhSoft built an AI layer that automated document review and surfaced decisions our team used to make by hand. The models were production-ready, well documented, and easy for our staff to trust.",
+    project: "Intelligent automation platform",
+  },
+  {
+    id: 2,
+    name: "Daniel Okonkwo",
+    role: "CTO",
+    location: "London",
+    avatar: "/placeholder.svg?height=60&width=60",
+    rating: 5,
+    service: "Blockchain",
+    text: "From smart contracts to the NFT marketplace and token bridge, RhSoft shipped a secure on-chain stack we could take to mainnet. Their Solidity work, audits, and dapp integration were exceptionally thorough.",
+    project: "NFT marketplace & token bridge",
+  },
+  {
+    id: 3,
+    name: "Yuki Tanaka",
+    role: "Engineering Manager",
+    location: "Tokyo",
+    avatar: "/placeholder.svg?height=60&width=60",
+    rating: 5,
+    service: "Web",
+    text: "We needed a custom web platform with APIs, dashboards, and cloud hosting that would scale. RhSoft delivered a clean Laravel and Vue system on AWS, with clear code and a launch that stayed stable under real traffic.",
+    project: "Cloud web platform",
+  },
+  {
+    id: 4,
+    name: "Sofia Alvarez",
+    role: "Founder",
+    location: "Miami",
+    avatar: "/placeholder.svg?height=60&width=60",
+    rating: 5,
+    service: "E-commerce",
+    text: "Our store, checkout, and seller tools finally work as one product. RhSoft rebuilt the catalog, inventory, and admin dashboard so we convert more orders without fighting the backend every week.",
+    project: "E-commerce store & seller tools",
+  },
+  {
+    id: 5,
+    name: "James Whitfield",
+    role: "Product Director",
+    location: "Austin",
+    avatar: "/placeholder.svg?height=60&width=60",
+    rating: 5,
+    service: "Mobile",
+    text: "The iOS and Android apps feel native, fast, and easy to extend. RhSoft handled React Native, chat, and store listings end to end — we shipped to the App Store and Play Store on the timeline we promised.",
+    project: "iOS & Android consumer app",
+  },
 ]
 
 export function TestimonialsSection() {
@@ -90,7 +94,7 @@ export function TestimonialsSection() {
             </span>
           </h2>
           <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-            Don't just take our word for it - hear from our satisfied customers
+            Clients across AI, blockchain, web, e-commerce, and mobile
           </p>
         </div>
 
@@ -127,7 +131,9 @@ export function TestimonialsSection() {
                   <p className="text-sm text-slate-600 dark:text-slate-400">
                     {currentTestimonial.role} • {currentTestimonial.location}
                   </p>
-                  <p className="text-xs text-brand-700 dark:text-brand-300 mt-1">{currentTestimonial.project}</p>
+                  <p className="text-xs text-brand-700 dark:text-brand-300 mt-1">
+                    {currentTestimonial.service} • {currentTestimonial.project}
+                  </p>
                 </div>
               </div>
             </CardContent>
@@ -171,17 +177,20 @@ export function TestimonialsSection() {
         </div>
 
         {/* All testimonials grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
-          {testimonials.slice(0, 3).map((testimonial) => (
+        <div className="grid md:grid-cols-2 xl:grid-cols-5 gap-6 mt-16">
+          {testimonials.map((testimonial) => (
             <Card
               key={testimonial.id}
               className="bg-white/40 dark:bg-slate-800/40 backdrop-blur-sm border border-white/20 hover:bg-white/60 dark:hover:bg-slate-800/60 transition-all duration-300"
             >
               <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-500 fill-current" />
-                  ))}
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 text-yellow-500 fill-current" />
+                    ))}
+                  </div>
+                  <span className="text-xs font-semibold text-brand-700 dark:text-brand-300">{testimonial.service}</span>
                 </div>
                 <p className="text-sm text-slate-600 dark:text-slate-300 mb-4">
                   "{testimonial.text.substring(0, 120)}..."

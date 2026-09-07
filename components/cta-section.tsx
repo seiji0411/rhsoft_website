@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowRight, Phone, Mail, MessageCircle } from "lucide-react"
-import Link from "next/link"
+import { Phone, Mail, MessageCircle } from "lucide-react"
 
 export function CTASection() {
   return (
@@ -14,10 +13,10 @@ export function CTASection() {
           <div className="absolute bottom-0 left-0 w-80 h-80 bg-white/10 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2" />
 
           <CardContent className="relative z-10 p-8 md:p-16 text-center text-white">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Ready to Transform Your Space?</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Ready to Transform Your Business?</h2>
             <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto opacity-90">
-              Get a free consultation and quote for your glass project. Our experts are ready to bring your vision to
-              life with premium glass solutions.
+              Get a free consultation and quote for your software project. Our experts are ready to bring your vision to
+              life with premium software solutions.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

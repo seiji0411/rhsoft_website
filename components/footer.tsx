@@ -18,7 +18,7 @@ export function Footer() {
               RHSoft is a software development company that provides custom software solutions for businesses. Transforming visions into reality with
               expert craftsmanship and innovative software solutions.
             </p>
-            <div className="flex space-x-4">
+            {/* <div className="flex space-x-4">
               <Button size="icon" variant="ghost" className="hover:bg-brand-700">
                 <Facebook className="w-5 h-5" />
               </Button>
@@ -34,7 +34,7 @@ export function Footer() {
               <Button size="icon" variant="ghost" className="hover:bg-brand-700">
                 <Github className="w-5 h-5" />
               </Button>
-            </div>
+            </div> */}
           </div>
 
           {/* Quick Links */}

@@ -20,47 +20,58 @@ function ContactTabs() {
   }, [searchParams])
 
   return (
-    <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-      <TabsList className="grid w-full grid-cols-2 mb-8 bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm">
-        <TabsTrigger value="contact" className="flex items-center space-x-2">
-          <MessageCircle className="w-4 h-4" />
-          <span>Contact Us</span>
-        </TabsTrigger>
-        <TabsTrigger value="quote" className="flex items-center space-x-2">
-          <Calculator className="w-4 h-4" />
-          <span>Get Quote</span>
-        </TabsTrigger>
-      </TabsList>
+    // <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+    //   <TabsList className="grid w-full grid-cols-2 mb-8 bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm">
+    //     <TabsTrigger value="contact" className="flex items-center space-x-2">
+    //       <MessageCircle className="w-4 h-4" />
+    //       <span>Contact Us</span>
+    //     </TabsTrigger>
+    //     <TabsTrigger value="quote" className="flex items-center space-x-2">
+    //       <Calculator className="w-4 h-4" />
+    //       <span>Get Quote</span>
+    //     </TabsTrigger>
+    //   </TabsList>
 
-      <TabsContent value="contact">
-        <Card className="bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm border border-white/30">
-          <CardContent className="p-8">
-            <div className="text-center mb-8">
-              <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Send us a Message</h2>
-              <p className="text-slate-600 dark:text-slate-400">
-                Have a question or need assistance? We'd love to hear from you.
-              </p>
-            </div>
-            <ContactForm />
-          </CardContent>
-        </Card>
-      </TabsContent>
+    //   <TabsContent value="contact">
+    //     <Card className="bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm border border-white/30">
+    //       <CardContent className="p-8">
+    //         <div className="text-center mb-8">
+    //           <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Send us a Message</h2>
+    //           <p className="text-slate-600 dark:text-slate-400">
+    //             Have a question or need assistance? We'd love to hear from you.
+    //           </p>
+    //         </div>
+    //         <ContactForm />
+    //       </CardContent>
+    //     </Card>
+    //   </TabsContent>
 
-      <TabsContent value="quote">
-        <Card className="bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm border border-white/30">
-          <CardContent className="p-8">
-            <div className="text-center mb-8">
-              <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Request a Quote</h2>
-              <p className="text-slate-600 dark:text-slate-400">
-                Get a detailed quote for your glass project. Include as much detail as possible for an accurate
-                estimate.
-              </p>
-            </div>
-            <QuoteForm />
-          </CardContent>
-        </Card>
-      </TabsContent>
-    </Tabs>
+    //   <TabsContent value="quote">
+    //     <Card className="bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm border border-white/30">
+    //       <CardContent className="p-8">
+    //         <div className="text-center mb-8">
+    //           <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Request a Quote</h2>
+    //           <p className="text-slate-600 dark:text-slate-400">
+    //             Get a detailed quote for your glass project. Include as much detail as possible for an accurate
+    //             estimate.
+    //           </p>
+    //         </div>
+    //         <QuoteForm />
+    //       </CardContent>
+    //     </Card>
+    //   </TabsContent>
+    // </Tabs>
+    <Card className="bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm border border-white/30">
+      <CardContent className="p-8">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Send us a Message</h2>
+          <p className="text-slate-600 dark:text-slate-400">
+            Have a question or need assistance? We'd love to hear from you.
+          </p>
+        </div>
+        <ContactForm />
+      </CardContent>
+    </Card>
   )
 }
 

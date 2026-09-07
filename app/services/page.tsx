@@ -96,10 +96,10 @@ export default function ServicesPage() {
                       className={`w-full mt-auto ${
                         service.popular
                           ? "bg-gradient-to-r from-brand-800 to-brand-600 hover:from-brand-900 hover:to-brand-700 text-white"
-                          : "bg-white/80 dark:bg-slate-700/80 hover:bg-brand-800 hover:text-white"
+                          : "bg-white/90 dark:bg-slate-700/80 hover:bg-brand-800 hover:text-white text-black"
                       } transition-colors duration-300`}
                     >
-                      <Link href="/contact?tab=quote">Get Quote</Link>
+                      <Link href="/contact">Contact Us</Link>
                     </Button>
                   </CardContent>
                 </Card>

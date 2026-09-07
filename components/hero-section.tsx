@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Play, Star, Award, Users, Clock } from "lucide-react"
+import { ArrowRight, Star, Award, Users, Clock } from "lucide-react"
 import { cn } from "@/lib/utils"
 import Link from "next/link"
 
@@ -42,14 +42,14 @@ export function HeroSection() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-      {/* Background with glassmorphism effect */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-indigo-600/20 to-purple-600/20" />
+      {/* Bright background wash — blue / indigo / violet, no teal */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-300/40 via-indigo-200/35 to-violet-300/30 dark:from-blue-500/20 dark:via-indigo-400/15 dark:to-violet-500/20" />
 
-      {/* Animated background elements */}
+      {/* Animated glow orbs */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-400/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-400/10 rounded-full blur-3xl animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-purple-400/10 rounded-full blur-3xl animate-pulse delay-2000" />
+        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-blue-400/40 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-[28rem] h-[28rem] bg-indigo-400/35 rounded-full blur-3xl animate-pulse delay-1000" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-violet-400/25 rounded-full blur-3xl animate-pulse delay-2000" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -62,12 +62,12 @@ export function HeroSection() {
             </div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-slate-900 via-blue-900 to-indigo-900 dark:from-white dark:via-blue-100 dark:to-indigo-100 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-brand-950 via-brand-800 to-brand-700 dark:from-white dark:via-brand-100 dark:to-brand-200 bg-clip-text text-transparent">
                 {slides[currentSlide].title}
               </span>
             </h1>
 
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-blue-600 dark:text-blue-400 mb-4">
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-brand-700 dark:text-brand-300 mb-4">
               {slides[currentSlide].subtitle}
             </h2>
 
@@ -79,7 +79,7 @@ export function HeroSection() {
               <Button
                 asChild
                 size="lg"
-                className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white px-8 py-4 text-lg"
+                className="bg-gradient-to-r from-brand-800 to-brand-600 hover:from-brand-900 hover:to-brand-700 text-white px-8 py-4 text-lg"
               >
                 <Link href="/services">
                   {slides[currentSlide].cta}
@@ -90,10 +90,9 @@ export function HeroSection() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="border-2 border-blue-500/30 bg-white/20 dark:bg-slate-800/20 backdrop-blur-sm hover:bg-white/30 dark:hover:bg-slate-800/30 px-8 py-4 text-lg"
+                className="border-2 border-brand-500/30 bg-white/20 dark:bg-slate-800/20 backdrop-blur-sm hover:bg-white/30 dark:hover:bg-slate-800/30 px-8 py-4 text-lg"
               >
                 <Link href="/portfolio">
-                  {/* <Play className="mr-2 w-5 h-5" /> */}
                   Our Portfolio
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -104,21 +103,21 @@ export function HeroSection() {
             <div className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-white/20">
               <div className="text-center">
                 <div className="flex items-center justify-center mb-2">
-                  <Award className="w-6 h-6 text-blue-500 mr-2" />
+                  <Award className="w-6 h-6 text-brand-500 mr-2" />
                   <span className="text-2xl font-bold text-slate-900 dark:text-white">9+</span>
                 </div>
                 <p className="text-sm text-slate-600 dark:text-slate-400">Years Experience</p>
               </div>
               <div className="text-center">
                 <div className="flex items-center justify-center mb-2">
-                  <Users className="w-6 h-6 text-blue-500 mr-2" />
+                  <Users className="w-6 h-6 text-brand-500 mr-2" />
                   <span className="text-2xl font-bold text-slate-900 dark:text-white">100+</span>
                 </div>
                 <p className="text-sm text-slate-600 dark:text-slate-400">Happy Clients</p>
               </div>
               <div className="text-center">
                 <div className="flex items-center justify-center mb-2">
-                  <Clock className="w-6 h-6 text-blue-500 mr-2" />
+                  <Clock className="w-6 h-6 text-brand-500 mr-2" />
                   <span className="text-2xl font-bold text-slate-900 dark:text-white">24/7</span>
                 </div>
                 <p className="text-sm text-slate-600 dark:text-slate-400">Support</p>
@@ -135,7 +134,6 @@ export function HeroSection() {
                 className="w-full h-96 object-cover rounded-xl"
               />
 
-              {/* Glassmorphism overlay */}
               <div className="absolute inset-8 rounded-xl bg-gradient-to-t from-black/20 to-transparent" />
             </div>
 
@@ -147,7 +145,7 @@ export function HeroSection() {
                   onClick={() => setCurrentSlide(index)}
                   className={cn(
                     "w-3 h-3 rounded-full transition-all duration-300",
-                    index === currentSlide ? "bg-blue-500 w-8" : "bg-white/40 hover:bg-white/60",
+                    index === currentSlide ? "bg-brand-800 w-8" : "bg-white/40 hover:bg-white/60",
                   )}
                   title={`Go to slide ${index + 1}`}
                   aria-label={`Go to slide ${index + 1}`}

@@ -181,10 +181,10 @@ export default function PortfolioPage() {
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-brand-50 via-brand-100 to-brand-200 dark:from-brand-950 dark:via-brand-900 dark:to-brand-800">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-slate-900 via-blue-900 to-indigo-900 dark:from-white dark:via-blue-100 dark:to-indigo-100 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-brand-950 via-brand-800 to-brand-700 dark:from-white dark:via-brand-100 dark:to-brand-200 bg-clip-text text-transparent">
               Our Portfolio
             </span>
           </h1>
@@ -221,7 +221,7 @@ export default function PortfolioPage() {
                     onClick={() => setSelectedCategory(category)}
                     className={
                       selectedCategory === category
-                        ? "bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700"
+                        ? "bg-gradient-to-r from-brand-800 to-brand-600 hover:from-brand-900 hover:to-brand-700"
                         : "bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm border-white/30"
                     }
                   >
@@ -241,7 +241,7 @@ export default function PortfolioPage() {
             {filteredProjects.map((project) => (
               <Card
                 key={project.id}
-                className="group overflow-hidden hover:shadow-xl transition-all duration-300 bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm border border-white/30 hover:border-blue-500/30"
+                className="group overflow-hidden hover:shadow-xl transition-all duration-300 bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm border border-white/30 hover:border-brand-500/30"
               >
                 <div className="relative overflow-hidden">
                   <img
@@ -260,7 +260,7 @@ export default function PortfolioPage() {
                       View Details
                     </Button>
                   </div>
-                  <Badge className="absolute top-4 right-4 bg-blue-500/80 backdrop-blur-sm">{project.category}</Badge>
+                  <Badge className="absolute top-4 right-4 bg-brand-800/80 backdrop-blur-sm">{project.category}</Badge>
                 </div>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">{project.title}</h3>
@@ -282,7 +282,7 @@ export default function PortfolioPage() {
                       <Badge
                         key={index}
                         variant="secondary"
-                        className="text-xs bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300"
+                        className="text-xs bg-brand-100 dark:bg-brand-900/30 text-brand-800 dark:text-brand-300"
                       >
                         {tag}
                       </Badge>
@@ -336,7 +336,7 @@ export default function PortfolioPage() {
                     <h2 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-2">
                       {selectedProject.title}
                     </h2>
-                    <Badge className="bg-blue-500 text-white">{selectedProject.category}</Badge>
+                    <Badge className="bg-brand-800 text-white">{selectedProject.category}</Badge>
                   </div>
                 </div>
 
@@ -364,7 +364,7 @@ export default function PortfolioPage() {
                         <Badge
                           key={index}
                           variant="secondary"
-                          className="bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300"
+                          className="bg-brand-100 dark:bg-brand-900/30 text-brand-800 dark:text-brand-300"
                         >
                           {tag}
                         </Badge>
@@ -376,7 +376,7 @@ export default function PortfolioPage() {
                 <div className="flex gap-4">
                   <Button
                     asChild
-                    className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700"
+                    className="bg-gradient-to-r from-brand-800 to-brand-600 hover:from-brand-900 hover:to-brand-700"
                   >
                     <Link href="/contact?tab=quote">Get Similar Quote</Link>
                   </Button>

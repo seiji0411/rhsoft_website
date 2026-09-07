@@ -25,7 +25,7 @@ export async function POST(request: NextRequest) {
       console.error("Failed to send notification email:", notificationResult.error)
 
       const message = notificationResult.error?.includes("Missing email configuration")
-        ? "Contact form is temporarily unavailable because email is not configured on the server. Please call us directly at +91 9320008279."
+        ? "Contact form is temporarily unavailable because email is not configured on the server. Please call us directly at +1 (213) 545-1265."
         : "Failed to send notification. Please try again or contact us directly."
 
       const status = notificationResult.error?.includes("Missing email configuration") ? 503 : 500

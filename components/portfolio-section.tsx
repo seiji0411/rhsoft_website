@@ -174,7 +174,7 @@ export function PortfolioSection() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-slate-900 via-blue-900 to-indigo-900 dark:from-white dark:via-blue-100 dark:to-indigo-100 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-brand-950 via-brand-800 to-brand-700 dark:from-white dark:via-brand-100 dark:to-brand-200 bg-clip-text text-transparent">
               Our Portfolio
             </span>
           </h2>
@@ -191,7 +191,7 @@ export function PortfolioSection() {
                 onClick={() => setSelectedCategory(category)}
                 className={
                   selectedCategory === category
-                    ? "bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700"
+                    ? "bg-gradient-to-r from-brand-800 to-brand-600 hover:from-brand-900 hover:to-brand-700"
                     : "bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm border-white/30 hover:bg-white/80 dark:hover:bg-slate-800/80"
                 }
               >
@@ -205,7 +205,7 @@ export function PortfolioSection() {
           {filteredProjects.map((project) => (
             <Card
               key={project.id}
-              className="group overflow-hidden hover:shadow-xl transition-all duration-300 bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm border border-white/30 hover:border-blue-500/30"
+              className="group overflow-hidden hover:shadow-xl transition-all duration-300 bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm border border-white/30 hover:border-brand-500/30"
             >
               <div className="relative overflow-hidden">
                 <img
@@ -223,7 +223,7 @@ export function PortfolioSection() {
                     View Details
                   </Button>
                 </div>
-                <Badge className="absolute top-4 right-4 bg-blue-500/80 backdrop-blur-sm">{project.category}</Badge>
+                <Badge className="absolute top-4 right-4 bg-brand-800/80 backdrop-blur-sm">{project.category}</Badge>
               </div>
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">{project.title}</h3>
@@ -245,7 +245,7 @@ export function PortfolioSection() {
                     <Badge
                       key={index}
                       variant="secondary"
-                      className="text-xs bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300"
+                      className="text-xs bg-brand-100 dark:bg-brand-900/30 text-brand-800 dark:text-brand-300"
                     >
                       {tag}
                     </Badge>
@@ -259,7 +259,7 @@ export function PortfolioSection() {
         <div className="text-center mt-12">
           <Button
             size="lg"
-            className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700"
+            className="bg-gradient-to-r from-brand-800 to-brand-600 hover:from-brand-900 hover:to-brand-700"
           >
             View All Projects
           </Button>

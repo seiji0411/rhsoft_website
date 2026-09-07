@@ -34,7 +34,7 @@ async function sendEmail({ to, subject, html, text }: { to: string; subject: str
   }
 
   await transporter.sendMail({
-    from: `"RoopGlass" <${process.env.FROM_EMAIL}>`,
+    from: `"RhSoft" <${process.env.FROM_EMAIL}>`,
     to,
     subject,
     html,
@@ -78,10 +78,10 @@ interface QuoteData {
   preferredDate?: string
 }
 
-const FROM_EMAIL = process.env.FROM_EMAIL || "info@roopglass.com"
-const CONTACT_EMAIL = process.env.CONTACT_EMAIL || "info@roopglass.com"
-const SALES_EMAIL = process.env.SALES_EMAIL || "info@roopglass.com"
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://roopglass.com"
+const FROM_EMAIL = process.env.FROM_EMAIL || "info@rhsoft.com"
+const CONTACT_EMAIL = process.env.CONTACT_EMAIL || "info@rhsoft.com"
+const SALES_EMAIL = process.env.SALES_EMAIL || "info@rhsoft.com"
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://rhsoft.com"
 
 export async function sendContactNotification(data: ContactData): Promise<EmailResult> {
   try {
@@ -102,7 +102,7 @@ export async function sendContactConfirmation(email: string, firstName: string):
   try {
     await sendEmail({
       to: email,
-      subject: "Thank you for contacting RoopGlass",
+      subject: "Thank you for contacting RhSoft",
       html: generateContactConfirmationHTML(firstName),
       text: generateContactConfirmationText(firstName),
     })
@@ -132,7 +132,7 @@ export async function sendQuoteConfirmation(email: string, firstName: string, qu
   try {
     await sendEmail({
       to: email,
-      subject: "Quote Request Received - RoopGlass",
+      subject: "Quote Request Received - RhSoft",
       html: generateQuoteConfirmationHTML(firstName, quoteId),
       text: generateQuoteConfirmationText(firstName, quoteId),
     })
@@ -169,7 +169,7 @@ function generateContactNotificationHTML(data: ContactData): string {
       <div class="container">
         <div class="header">
           <h1>🔔 New Contact Form Submission</h1>
-          <p>RoopGlass - Customer Inquiry</p>
+          <p>RhSoft - Customer Inquiry</p>
         </div>
         <div class="content">
           <div class="info-grid">
@@ -218,7 +218,7 @@ function generateContactConfirmationHTML(firstName: string): string {
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Thank you for contacting RoopGlass</title>
+      <title>Thank you for contacting RhSoft</title>
       <style>
         body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
         .container { max-width: 600px; margin: 0 auto; padding: 20px; }
@@ -232,12 +232,12 @@ function generateContactConfirmationHTML(firstName: string): string {
       <div class="container">
         <div class="header">
           <h1>✅ Message Received!</h1>
-          <p>Thank you for contacting RoopGlass</p>
+          <p>Thank you for contacting RhSoft</p>
         </div>
         <div class="content">
           <p>Dear ${firstName},</p>
           
-          <p>Thank you for reaching out to RoopGlass! We have successfully received your message and our team will review it shortly.</p>
+          <p>Thank you for reaching out to RhSoft! We have successfully received your message and our team will review it shortly.</p>
           
           <p><strong>What happens next?</strong></p>
           <ul>
@@ -248,13 +248,13 @@ function generateContactConfirmationHTML(firstName: string): string {
           
           <div class="contact-info">
             <h3>Need immediate assistance?</h3>
-            <p><strong>📱 Call us:</strong> +91 9320008279</p>
-            <p><strong>📧 Email:</strong> roopglass@gmail.com</p>
+            <p><strong>📱 Call us:</strong> +1 (213) 545-1265</p>
+            <p><strong>📧 Email:</strong> rhsoft@gmail.com</p>
             <p><strong>🕒 Hours:</strong> 24hr</p>
           </div>
           
           <p>Best regards,<br>
-          <strong>The RoopGlass Team</strong></p>
+          <strong>The RhSoft Team</strong></p>
           
           <p style="text-align: center; margin-top: 30px;">
             <a href="${SITE_URL}" class="cta-button">Visit Our Website</a>
@@ -444,15 +444,15 @@ function generateQuoteConfirmationHTML(firstName: string, quoteId: string): stri
           
           <div class="contact-info">
             <h3>Questions or urgent requirements?</h3>
-            <p><strong>📱 Call us:</strong> +91 9320008279</p>
-            <p><strong>📧 Email:</strong> info@roopglass.com</p>
+            <p><strong>📱 Call us:</strong> +1 (213) 545-1265</p>
+            <p><strong>📧 Email:</strong> info@rhsoft.com</p>
             <p><strong>💬 Reference:</strong> Quote ID ${quoteId}</p>
           </div>
           
-          <p>We appreciate your interest in RoopGlass and look forward to working with you on your glass project!</p>
+          <p>We appreciate your interest in RhSoft and look forward to working with you on your glass project!</p>
           
           <p>Best regards,<br>
-          <strong>The RoopGlass Sales Team</strong></p>
+          <strong>The RhSoft Sales Team</strong></p>
         </div>
       </div>
     </body>
@@ -463,7 +463,7 @@ function generateQuoteConfirmationHTML(firstName: string, quoteId: string): stri
 // Text versions for email clients that don't support HTML
 function generateContactNotificationText(data: ContactData): string {
   return `
-New Contact Form Submission - RoopGlass
+New Contact Form Submission - RhSoft
 
 Customer: ${data.firstName} ${data.lastName}
 Email: ${data.email}
@@ -481,18 +481,18 @@ Received: ${new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })} IS
 
 function generateContactConfirmationText(firstName: string): string {
   return `
-Thank you for contacting RoopGlass!
+Thank you for contacting RhSoft!
 
 Dear ${firstName},
 
 We have received your message and will get back to you within 24 hours.
 
 For immediate assistance:
-Phone: +91 9320008279
-Email: roopglass@gmail.com
+Phone: +1 (213) 545-1265
+Email: rhsoft@gmail.com
 
 Best regards,
-The RoopGlass Team
+The RhSoft Team
   `
 }
 
@@ -526,7 +526,7 @@ Received: ${new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })} IS
 
 function generateQuoteConfirmationText(firstName: string, quoteId: string): string {
   return `
-Quote Request Received - RoopGlass
+Quote Request Received - RhSoft
 
 Dear ${firstName},
 
@@ -541,11 +541,11 @@ Timeline:
 4. Delivery: You receive your comprehensive quote via email
 
 Questions? Contact us:
-Phone: +91 9320008279
-Email: info@roopglass.com
+Phone: +1 (213) 545-1265
+Email: info@rhsoft.com
 Reference: Quote ID ${quoteId}
 
 Best regards,
-The RoopGlass Sales Team
+The RhSoft Sales Team
   `
 }

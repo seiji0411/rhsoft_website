@@ -68,10 +68,10 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-brand-50 via-brand-100 to-brand-200 dark:from-brand-950 dark:via-brand-900 dark:to-brand-800">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-slate-900 via-blue-900 to-indigo-900 dark:from-white dark:via-blue-100 dark:to-indigo-100 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-brand-950 via-brand-800 to-brand-700 dark:from-white dark:via-brand-100 dark:to-brand-200 bg-clip-text text-transparent">
               Contact Us
             </span>
           </h1>
@@ -87,29 +87,29 @@ export default function ContactPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <Card className="text-center bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm border border-white/30 hover:shadow-lg transition-all duration-300">
               <CardContent className="p-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-brand-800 to-brand-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Phone className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="font-semibold text-slate-900 dark:text-white mb-2">Phone</h3>
-                <p className="text-slate-600 dark:text-slate-400">+91 9320008279</p>
+                <p className="text-slate-600 dark:text-slate-400">+1 (213) 545-1265</p>
                 <p className="text-sm text-slate-500 dark:text-slate-500">24/7 Immediate Support</p>
               </CardContent>
             </Card>
 
             <Card className="text-center bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm border border-white/30 hover:shadow-lg transition-all duration-300">
               <CardContent className="p-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-brand-800 to-brand-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Mail className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="font-semibold text-slate-900 dark:text-white mb-2">Email</h3>
-                <p className="text-slate-600 dark:text-slate-400">roopglass@gmail.com</p>
+                <p className="text-slate-600 dark:text-slate-400">rhsoft@gmail.com</p>
                 <p className="text-sm text-slate-500 dark:text-slate-500">Response within 24 hours</p>
               </CardContent>
             </Card>
 
             <Card className="text-center bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm border border-white/30 hover:shadow-lg transition-all duration-300">
               <CardContent className="p-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-brand-800 to-brand-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <MapPin className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="font-semibold text-slate-900 dark:text-white mb-2">Address</h3>
@@ -120,7 +120,7 @@ export default function ContactPage() {
 
             <Card className="text-center bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm border border-white/30 hover:shadow-lg transition-all duration-300">
               <CardContent className="p-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-brand-800 to-brand-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Clock className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="font-semibold text-slate-900 dark:text-white mb-2">Hours</h3>

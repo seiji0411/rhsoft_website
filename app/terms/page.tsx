@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Terms and Conditions | RoopGlass",
-  description: "Terms and conditions for using RoopGlass services and website.",
+  title: "Terms and Conditions | RhSoft",
+  description: "Terms and conditions for using RhSoft services and website.",
 }
 
 export default function TermsPage() {
@@ -30,21 +30,21 @@ export default function TermsPage() {
         <section>
           <h2 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">Intellectual Property</h2>
           <p>
-            Website content, branding, and visuals are the property of RoopGlass unless stated otherwise.
+            Website content, branding, and visuals are the property of RhSoft unless stated otherwise.
           </p>
         </section>
 
         <section>
           <h2 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">Limitation of Liability</h2>
           <p>
-            RoopGlass is not liable for indirect or consequential damages arising from use of this website.
+            RhSoft is not liable for indirect or consequential damages arising from use of this website.
           </p>
         </section>
 
         <section>
           <h2 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">Contact</h2>
           <p>
-            For questions about these terms, email roopglass@gmail.com or call +91 9320008279.
+            For questions about these terms, email rhsoft@gmail.com or call +1 (213) 545-1265.
           </p>
         </section>
       </div>

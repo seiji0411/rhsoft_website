@@ -89,7 +89,7 @@ export function ServicesSection() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-slate-900 via-blue-900 to-indigo-900 dark:from-white dark:via-blue-100 dark:to-indigo-100 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-brand-950 via-brand-800 to-brand-700 dark:from-white dark:via-brand-100 dark:to-brand-200 bg-clip-text text-transparent">
               Our Services
             </span>
           </h2>
@@ -102,7 +102,7 @@ export function ServicesSection() {
           {services.map((service, index) => (
             <Card
               key={index}
-              className="group hover:shadow-xl transition-all duration-300 bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm border border-white/30 hover:border-blue-500/30"
+              className="group hover:shadow-xl transition-all duration-300 bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm border border-white/30 hover:border-brand-500/30"
             >
               <CardHeader className="p-0">
                 <img
@@ -119,14 +119,14 @@ export function ServicesSection() {
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-slate-600 dark:text-slate-400">
-                      <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-3" />
+                      <div className="w-1.5 h-1.5 bg-brand-800 rounded-full mr-3" />
                       {feature}
                     </li>
                   ))}
                 </ul>
                 <Button
                   variant="outline"
-                  className="w-full group-hover:bg-blue-500 group-hover:text-white transition-colors duration-300"
+                  className="w-full group-hover:bg-brand-800 group-hover:text-white transition-colors duration-300"
                 >
                   Learn More
                 </Button>

@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | RoopGlass",
-  description: "Privacy policy for RoopGlass website and customer inquiries.",
+  title: "Privacy Policy | RhSoft",
+  description: "Privacy policy for RhSoft website and customer inquiries.",
 }
 
 export default function PrivacyPage() {
@@ -46,7 +46,7 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">Contact</h2>
           <p>
-            For privacy-related questions, contact us at roopglass@gmail.com or call +91 9320008279.
+            For privacy-related questions, contact us at rhsoft@gmail.com or call +1 (213) 545-1265.
           </p>
         </section>
       </div>

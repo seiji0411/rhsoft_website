@@ -83,10 +83,10 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-brand-50 via-brand-100 to-brand-200 dark:from-brand-950 dark:via-brand-900 dark:to-brand-800">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-slate-900 via-blue-900 to-indigo-900 dark:from-white dark:via-blue-100 dark:to-indigo-100 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-brand-950 via-brand-800 to-brand-700 dark:from-white dark:via-brand-100 dark:to-brand-200 bg-clip-text text-transparent">
               Our Services
             </span>
           </h1>
@@ -97,7 +97,7 @@ export default function ServicesPage() {
           <Button
             asChild
             size="lg"
-            className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700"
+            className="bg-gradient-to-r from-brand-800 to-brand-600 hover:from-brand-900 hover:to-brand-700"
           >
             <Link href="/contact?tab=quote">
               Get Free Consultation
@@ -116,18 +116,18 @@ export default function ServicesPage() {
                 key={index}
                 className={`relative group hover:shadow-xl transition-all duration-300 ${
                   service.popular
-                    ? "ring-2 ring-blue-500 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20"
+                    ? "ring-2 ring-brand-800 bg-gradient-to-br from-brand-50 to-brand-100 dark:from-brand-900/20 dark:to-brand-800/20"
                     : "bg-white/60 dark:bg-slate-800/60"
                 } backdrop-blur-sm border border-white/30`}
               >
                 {service.popular && (
-                  <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
+                  <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-brand-800 to-brand-600 text-white">
                     Most Popular
                   </Badge>
                 )}
 
                 <CardHeader>
-                  {/* <div className="w-12 h-12 bg-gradient-to-br from-blue-500o-indigo-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  {/* <div className="w-12 h-12 bg-gradient-to-br from-brand-800 to-brand-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     <img src={service.image} alt={service.title} className="w-12 h-12 object-cover rounded-lg" />
                   </div> */}
                   <CardTitle className="text-xl font-semibold text-slate-900 dark:text-white">
@@ -147,7 +147,7 @@ export default function ServicesPage() {
 
                 <CardContent>
                   <div className="mb-6">
-                    <p className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-4">{service.pricing}</p>
+                    <p className="text-2xl font-bold text-brand-700 dark:text-brand-300 mb-4">{service.pricing}</p>
                     <ul className="space-y-2">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-slate-600 dark:text-slate-400">
@@ -162,8 +162,8 @@ export default function ServicesPage() {
                     asChild
                     className={`w-full ${
                       service.popular
-                        ? "bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white"
-                        : "bg-white/80 dark:bg-slate-700/80 hover:bg-blue-500 hover:text-white"
+                        ? "bg-gradient-to-r from-brand-800 to-brand-600 hover:from-brand-900 hover:to-brand-700 text-white"
+                        : "bg-white/80 dark:bg-slate-700/80 hover:bg-brand-800 hover:text-white"
                     } transition-colors duration-300`}
                   >
                     <Link href="/contact?tab=quote">Get Quote</Link>
@@ -180,7 +180,7 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-slate-900 via-blue-900 to-indigo-900 dark:from-white dark:via-blue-100 dark:to-indigo-100 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-brand-950 via-brand-800 to-brand-700 dark:from-white dark:via-brand-100 dark:to-brand-200 bg-clip-text text-transparent">
                 Our Process
               </span>
             </h2>
@@ -197,7 +197,7 @@ export default function ServicesPage() {
               { step: "04", title: "Installation", description: "Professional installation and cleanup" },
             ].map((process, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-brand-800 to-brand-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-lg">{process.step}</span>
                 </div>
                 <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">{process.title}</h3>

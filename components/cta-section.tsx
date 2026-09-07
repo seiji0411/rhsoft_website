@@ -7,7 +7,7 @@ export function CTASection() {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <Card className="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 border-0 shadow-2xl overflow-hidden relative">
+        <Card className="bg-gradient-to-br from-brand-800 via-brand-700 to-brand-600 border-0 shadow-2xl overflow-hidden relative">
           {/* Background decoration */}
           <div className="absolute inset-0 bg-black/20" />
           <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2" />
@@ -24,18 +24,18 @@ export function CTASection() {
               <Button
                 asChild
                 size="lg"
-                className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold"
+                className="bg-white text-brand-800 hover:bg-gray-100 px-8 py-4 text-lg font-semibold"
               >
-                <a href="tel:+919320008279" className="flex items-center">
+                <a href="tel:+12135451265" className="flex items-center">
                   <Phone className="mr-2 w-5 h-5" />
-                  Call Now: +91 9320008279
+                  Call Now: +1 (213) 545-1265
                 </a>
               </Button>
               <Button
                 asChild
                 size="lg"
                 variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg font-semibold"
+                className="border-2 border-white text-white hover:bg-white hover:text-brand-800 px-8 py-4 text-lg font-semibold"
               >
                 <Link href="/contact?tab=quote">
                   <MessageCircle className="mr-2 w-5 h-5" />
@@ -51,7 +51,7 @@ export function CTASection() {
                   <Phone className="w-8 h-8" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Call Us</h3>
-                <p className="opacity-90">+91 9320008279</p>
+                <p className="opacity-90">+1 (213) 545-1265</p>
                 <p className="text-sm opacity-75">Available 24/7</p>
               </div>
               <div>
@@ -59,7 +59,7 @@ export function CTASection() {
                   <Mail className="w-8 h-8" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Email Us</h3>
-                <p className="opacity-90">roopglass@gmail.com</p>
+                <p className="opacity-90">rhsoft@gmail.com</p>
                 <p className="text-sm opacity-75">Quick response guaranteed</p>
               </div>
               <div>

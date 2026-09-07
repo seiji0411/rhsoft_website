@@ -68,7 +68,7 @@ function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
 
 export function StatsSection() {
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50/50 dark:bg-slate-900/50">
+    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-brand-50/50 dark:bg-brand-900/50">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((stat, index) => (
@@ -78,7 +78,7 @@ export function StatsSection() {
             >
               <CardContent className="p-6">
                 <div className="flex justify-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-brand-800 to-brand-600 rounded-lg flex items-center justify-center">
                     <stat.icon className="w-6 h-6 text-white" />
                   </div>
                 </div>

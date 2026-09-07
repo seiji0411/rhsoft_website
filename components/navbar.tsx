@@ -32,7 +32,7 @@ export function Navbar() {
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-300",
         isScrolled
-          ? "backdrop-blur-md bg-white/80 dark:bg-slate-900/80 border-b border-white/20 shadow-lg"
+          ? "backdrop-blur-md bg-white/80 dark:bg-brand-900/80 border-b border-white/20 shadow-lg"
           : "bg-transparent",
       )}
     >
@@ -43,9 +43,9 @@ export function Navbar() {
             <img
               src={logo.src}
               alt="RhSoft Logo"
-              className="w-12 h-11 object-contain"
+              className="w-9 h-9 object-contain"
             />
-            <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+            <span className="text-xl font-bold bg-gradient-to-r from-brand-800 to-brand-600 bg-clip-text text-transparent">
               RhSoft
             </span>
             </Link>
@@ -56,7 +56,7 @@ export function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 font-medium"
+                className="text-slate-700 dark:text-slate-300 hover:text-brand-700 dark:hover:text-brand-300 transition-colors duration-200 font-medium"
               >
                 {item.label}
               </Link>
@@ -65,18 +65,17 @@ export function Navbar() {
 
           {/* Right side */}
           <div className="hidden md:flex items-center space-x-4">
-            {/* Disabled Phone Number for now */}
-            {/* <div className="flex items-center space-x-2 text-sm text-slate-600 dark:text-slate-400">
+            <div className="flex items-center space-x-2 text-sm text-slate-600 dark:text-slate-400">
               <Phone className="w-4 h-4" />
-              <span>+91 9320008279</span>
-            </div> */}
+              <span>+1 (213) 545-1265</span>
+            </div>
             <ThemeToggle />
-            <Button
+            {/* <Button
               asChild
-              className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700"
+              className="bg-gradient-to-r from-brand-800 to-brand-600 hover:from-brand-900 hover:to-brand-700"
             >
               <Link href="/contact?tab=quote">Get Quote</Link>
-            </Button>
+            </Button> */}
           </div>
 
           {/* Mobile menu button */}
@@ -90,13 +89,13 @@ export function Navbar() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden absolute top-16 left-0 right-0 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-white/20 shadow-lg">
+          <div className="md:hidden absolute top-16 left-0 right-0 bg-white/95 dark:bg-brand-900/95 backdrop-blur-md border-b border-white/20 shadow-lg">
             <div className="px-4 py-6 space-y-4">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="block text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 font-medium"
+                  className="block text-slate-700 dark:text-slate-300 hover:text-brand-700 dark:hover:text-brand-300 transition-colors duration-200 font-medium"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}
@@ -105,11 +104,11 @@ export function Navbar() {
               <div className="pt-4 border-t border-slate-200 dark:border-slate-700">
                 <div className="flex items-center space-x-2 text-sm text-slate-600 dark:text-slate-400 mb-4">
                   <Phone className="w-4 h-4" />
-                  <span>+91 9320008279</span>
+                  <span>+1 (213) 545-1265</span>
                 </div>
                 <Button
                   asChild
-                  className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700"
+                  className="w-full bg-gradient-to-r from-brand-800 to-brand-600 hover:from-brand-900 hover:to-brand-700"
                 >
                   <Link href="/contact?tab=quote">Get Quote</Link>
                 </Button>

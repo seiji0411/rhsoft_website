@@ -5,15 +5,13 @@ import { Facebook, Twitter, Instagram, Linkedin, Phone, Mail, MapPin, Clock, Git
 
 export function Footer() {
   return (
-    <footer className="bg-slate-900 text-white">
+    <footer className="bg-brand-800 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">RH</span>
-              </div>
+              <img src="/logo.png" alt="RhSoft Logo" className="w-8 h-8 object-contain rounded-lg" />
               <span className="text-xl font-bold">RhSoft</span>
             </div>
             <p className="text-slate-300 mb-6">
@@ -21,19 +19,19 @@ export function Footer() {
               expert craftsmanship and innovative software solutions.
             </p>
             <div className="flex space-x-4">
-              <Button size="icon" variant="ghost" className="hover:bg-blue-600">
+              <Button size="icon" variant="ghost" className="hover:bg-brand-700">
                 <Facebook className="w-5 h-5" />
               </Button>
-              <Button size="icon" variant="ghost" className="hover:bg-blue-600">
+              <Button size="icon" variant="ghost" className="hover:bg-brand-700">
                 <Twitter className="w-5 h-5" />
               </Button>
-              <Button size="icon" variant="ghost" className="hover:bg-blue-600">
+              <Button size="icon" variant="ghost" className="hover:bg-brand-700">
                 <Instagram className="w-5 h-5" />
               </Button>
-              <Button size="icon" variant="ghost" className="hover:bg-blue-600">
+              <Button size="icon" variant="ghost" className="hover:bg-brand-700">
                 <Linkedin className="w-5 h-5" />
               </Button>
-              <Button size="icon" variant="ghost" className="hover:bg-blue-600">
+              <Button size="icon" variant="ghost" className="hover:bg-brand-700">
                 <Github className="w-5 h-5" />
               </Button>
             </div>
@@ -108,21 +106,21 @@ export function Footer() {
             <h3 className="text-lg font-semibold mb-6">Contact Info</h3>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
+                <MapPin className="w-5 h-5 text-brand-300 mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-slate-300">142 W 36th St, New York, NY 10001</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-blue-400 flex-shrink-0" />
+                <Phone className="w-5 h-5 text-brand-300 flex-shrink-0" />
                 <p className="text-slate-300">+1 (929) 563-6548</p>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-blue-400 flex-shrink-0" />
+                <Mail className="w-5 h-5 text-brand-300 flex-shrink-0" />
                 <p className="text-slate-300">info@rhsoft.com</p>
               </div>
               <div className="flex items-start space-x-3">
-                <Clock className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
+                <Clock className="w-5 h-5 text-brand-300 mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-slate-300">24/7 Support</p>
                 </div>
@@ -132,7 +130,7 @@ export function Footer() {
         </div>
 
         {/* Newsletter */}
-        <div className="border-t border-slate-700 mt-12 pt-8">
+        <div className="border-t border-white/10 mt-12 pt-8">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-lg font-semibold mb-2">Stay Updated</h3>
@@ -141,9 +139,9 @@ export function Footer() {
             <div className="flex space-x-2">
               <Input
                 placeholder="Enter your email"
-                className="bg-slate-800 border-slate-600 text-white placeholder:text-slate-400"
+                className="bg-brand-900 border-brand-600 text-white placeholder:text-slate-400"
               />
-              <Button className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700">
+              <Button className="bg-white text-brand-800 hover:bg-brand-100">
                 Subscribe
               </Button>
             </div>
@@ -151,7 +149,7 @@ export function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-slate-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-white/10 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-slate-400 text-sm">© 2026 RhSoft. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="/privacy" className="text-slate-400 hover:text-white text-sm transition-colors">

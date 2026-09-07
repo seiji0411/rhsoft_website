@@ -535,11 +535,11 @@ export function QuoteForm() {
                 <div className="space-y-1 leading-none">
                   <FormLabel>
                     I agree to the{" "}
-                    <a href="/terms" className="text-blue-600 hover:underline">
+                    <a href="/terms" className="text-brand-700 hover:underline">
                       Terms and Conditions
                     </a>{" "}
                     and{" "}
-                    <a href="/privacy" className="text-blue-600 hover:underline">
+                    <a href="/privacy" className="text-brand-700 hover:underline">
                       Privacy Policy
                     </a>
                     *
@@ -554,7 +554,7 @@ export function QuoteForm() {
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700"
+          className="w-full bg-gradient-to-r from-brand-800 to-brand-600 hover:from-brand-900 hover:to-brand-700"
         >
           {isSubmitting ? (
             <>

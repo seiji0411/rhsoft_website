@@ -15,7 +15,7 @@ const testimonials =
       location: "Navi Mumbai",
       avatar: "/placeholder.svg?height=60&width=60",
       rating: 5,
-      text: "RoopGlass successfully executed ACP facade and glass work for our Navi Mumbai Maha Nagar Palika projects. Highly professional and reliable!",
+      text: "RhSoft successfully executed ACP facade and glass work for our Navi Mumbai Maha Nagar Palika projects. Highly professional and reliable!",
       project: "ACP Facade & Glass Work",
     },
     {
@@ -25,7 +25,7 @@ const testimonials =
       location: "Gorai, Mumbai",
       avatar: "/placeholder.svg?height=60&width=60",
       rating: 5,
-      text: "RoopGlass delivered exceptional interior glass work for the Global Pagoda Vipassana Gallery. Truly enhanced the spiritual ambiance of the space.",
+      text: "RhSoft delivered exceptional interior glass work for the Global Pagoda Vipassana Gallery. Truly enhanced the spiritual ambiance of the space.",
       project: "Tourist Attraction & Meditation Center",
     },
     {
@@ -35,7 +35,7 @@ const testimonials =
       location: "Mumbai",
       avatar: "/placeholder.svg?height=60&width=60",
       rating: 5,
-      text: "Glass facade work for high-rise buildings is challenging, but RoopGlass handled it with precision and expertise. The quality and finish exceeded expectations.",
+      text: "Glass facade work for high-rise buildings is challenging, but RhSoft handled it with precision and expertise. The quality and finish exceeded expectations.",
       project: "Glass Facade",
     },
     {
@@ -45,7 +45,7 @@ const testimonials =
       location: "Mumbai",
       avatar: "/placeholder.svg?height=60&width=60",
       rating: 5,
-      text: "The glass partitions installed by RoopGlass gave our restaurant a modern, open, and welcoming atmosphere. Our customers love the new vibe!",
+      text: "The glass partitions installed by RhSoft gave our restaurant a modern, open, and welcoming atmosphere. Our customers love the new vibe!",
       project: "Glass Facade Work",
     }
     // {
@@ -55,7 +55,7 @@ const testimonials =
     //   location: "Mumbai",
     //   avatar: "/placeholder.svg?height=60&width=60",
     //   rating: 5,
-    //   text: "RoopGlass brings architectural visions to life with precision. Their innovative glass solutions and technical expertise make them an invaluable partner in our projects.",
+    //   text: "RhSoft brings architectural visions to life with precision. Their innovative glass solutions and technical expertise make them an invaluable partner in our projects.",
     //   project: "Luxury Villa Design",
     // },
 ]
@@ -85,7 +85,7 @@ export function TestimonialsSection() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-slate-900 via-blue-900 to-indigo-900 dark:from-white dark:via-blue-100 dark:to-indigo-100 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-brand-950 via-brand-800 to-brand-700 dark:from-white dark:via-brand-100 dark:to-brand-200 bg-clip-text text-transparent">
               What Our Clients Say
             </span>
           </h2>
@@ -99,7 +99,7 @@ export function TestimonialsSection() {
           <Card className="bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm border border-white/30 shadow-xl">
             <CardContent className="p-8 md:p-12">
               <div className="flex items-center justify-center mb-8">
-                <Quote className="w-12 h-12 text-blue-500 opacity-50" />
+                <Quote className="w-12 h-12 text-brand-500 opacity-50" />
               </div>
 
               <blockquote className="text-lg md:text-xl text-center text-slate-700 dark:text-slate-300 mb-8 leading-relaxed">
@@ -115,7 +115,7 @@ export function TestimonialsSection() {
               <div className="flex items-center justify-center space-x-4">
                 <Avatar className="w-16 h-16">
                   <AvatarImage src={currentTestimonial.avatar || "/placeholder.svg"} alt={currentTestimonial.name} />
-                  <AvatarFallback className="bg-gradient-to-br from-blue-500 to-indigo-600 text-white">
+                  <AvatarFallback className="bg-gradient-to-br from-brand-800 to-brand-600 text-white">
                     {currentTestimonial.name
                       .split(" ")
                       .map((n) => n[0])
@@ -127,7 +127,7 @@ export function TestimonialsSection() {
                   <p className="text-sm text-slate-600 dark:text-slate-400">
                     {currentTestimonial.role} • {currentTestimonial.location}
                   </p>
-                  <p className="text-xs text-blue-600 dark:text-blue-400 mt-1">{currentTestimonial.project}</p>
+                  <p className="text-xs text-brand-700 dark:text-brand-300 mt-1">{currentTestimonial.project}</p>
                 </div>
               </div>
             </CardContent>
@@ -150,9 +150,9 @@ export function TestimonialsSection() {
                   key={index}
                   onClick={() => setCurrentIndex(index)}
                   aria-label={`Go to testimonial ${index + 1}`}
-                  className={`h-3 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
+                  className={`h-3 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand-800 focus:ring-offset-2 ${
                     index === currentIndex
-                      ? "bg-blue-500 w-8 shadow-md"
+                      ? "bg-brand-800 w-8 shadow-md"
                       : "bg-slate-300 dark:bg-slate-600 hover:bg-slate-400 dark:hover:bg-slate-500 w-3"
                   }`}
                 />
@@ -189,7 +189,7 @@ export function TestimonialsSection() {
                 <div className="flex items-center space-x-3">
                   <Avatar className="w-10 h-10">
                     <AvatarImage src={testimonial.avatar || "/placeholder.svg"} alt={testimonial.name} />
-                    <AvatarFallback className="bg-gradient-to-br from-blue-500 to-indigo-600 text-white text-sm">
+                    <AvatarFallback className="bg-gradient-to-br from-brand-800 to-brand-600 text-white text-sm">
                       {testimonial.name
                         .split(" ")
                         .map((n) => n[0])

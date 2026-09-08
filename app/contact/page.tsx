@@ -1,23 +1,19 @@
 "use client"
 
-import { useSearchParams } from "next/navigation"
-import { useEffect, useState } from "react"
 import { ContactForm } from "@/components/contact-form"
-import { QuoteForm } from "@/components/quote-form"
 import { Card, CardContent } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Phone, Mail, MapPin, Clock, MessageCircle, Calculator } from "lucide-react"
+import { Phone, Mail, MapPin, Clock } from "lucide-react"
 
 function ContactTabs() {
-  const searchParams = useSearchParams()
-  const [activeTab, setActiveTab] = useState("contact")
+  // const searchParams = useSearchParams()
+  // const [activeTab, setActiveTab] = useState("contact")
 
-  useEffect(() => {
-    const tab = searchParams.get("tab")
-    if (tab === "quote") {
-      setActiveTab("quote")
-    }
-  }, [searchParams])
+  // useEffect(() => {
+  //   const tab = searchParams.get("tab")
+  //   if (tab === "quote") {
+  //     setActiveTab("quote")
+  //   }
+  // }, [searchParams])
 
   return (
     // <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">

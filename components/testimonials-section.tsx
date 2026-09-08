@@ -12,7 +12,7 @@ const testimonials = [
     name: "Priya Nair",
     role: "Head of Product",
     location: "Singapore",
-    avatar: "/placeholder.svg?height=60&width=60",
+    avatar: "/assets/testimonials/priya-nair.jpg?v=2",
     rating: 5,
     service: "AI",
     text: "RhSoft built an AI layer that automated document review and surfaced decisions our team used to make by hand. The models were production-ready, well documented, and easy for our staff to trust.",
@@ -23,7 +23,7 @@ const testimonials = [
     name: "Daniel Okonkwo",
     role: "CTO",
     location: "London",
-    avatar: "/placeholder.svg?height=60&width=60",
+    avatar: "/assets/testimonials/daniel-okonkwo.jpg?v=2",
     rating: 5,
     service: "Blockchain",
     text: "From smart contracts to the NFT marketplace and token bridge, RhSoft shipped a secure on-chain stack we could take to mainnet. Their Solidity work, audits, and dapp integration were exceptionally thorough.",
@@ -34,7 +34,7 @@ const testimonials = [
     name: "Yuki Tanaka",
     role: "Engineering Manager",
     location: "Tokyo",
-    avatar: "/placeholder.svg?height=60&width=60",
+    avatar: "/assets/testimonials/yuki-tanaka.jpg?v=2",
     rating: 5,
     service: "Web",
     text: "We needed a custom web platform with APIs, dashboards, and cloud hosting that would scale. RhSoft delivered a clean Laravel and Vue system on AWS, with clear code and a launch that stayed stable under real traffic.",
@@ -45,7 +45,7 @@ const testimonials = [
     name: "Sofia Alvarez",
     role: "Founder",
     location: "Miami",
-    avatar: "/placeholder.svg?height=60&width=60",
+    avatar: "/assets/testimonials/sofia-alvarez.jpg?v=2",
     rating: 5,
     service: "E-commerce",
     text: "Our store, checkout, and seller tools finally work as one product. RhSoft rebuilt the catalog, inventory, and admin dashboard so we convert more orders without fighting the backend every week.",
@@ -56,7 +56,7 @@ const testimonials = [
     name: "James Whitfield",
     role: "Product Director",
     location: "Austin",
-    avatar: "/placeholder.svg?height=60&width=60",
+    avatar: "/assets/testimonials/james-whitfield.jpg?v=2",
     rating: 5,
     service: "Mobile",
     text: "The iOS and Android apps feel native, fast, and easy to extend. RhSoft handled React Native, chat, and store listings end to end — we shipped to the App Store and Play Store on the timeline we promised.",
@@ -101,24 +101,28 @@ export function TestimonialsSection() {
         <div className="relative max-w-4xl mx-auto">
           {/* Main testimonial */}
           <Card className="bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm border border-white/30 shadow-xl">
-            <CardContent className="p-8 md:p-12">
-              <div className="flex items-center justify-center mb-8">
+            <CardContent className="p-8 md:p-12 flex flex-col min-h-[28rem] md:min-h-[30rem]">
+              <div className="flex items-center justify-center mb-8 shrink-0">
                 <Quote className="w-12 h-12 text-brand-500 opacity-50" />
               </div>
 
-              <blockquote className="text-lg md:text-xl text-center text-slate-700 dark:text-slate-300 mb-8 leading-relaxed">
+              <blockquote className="text-lg md:text-xl text-center text-slate-700 dark:text-slate-300 mb-8 leading-relaxed flex-1">
                 "{currentTestimonial.text}"
               </blockquote>
 
-              <div className="flex items-center justify-center mb-6">
+              <div className="flex items-center justify-center mb-6 shrink-0">
                 {[...Array(currentTestimonial.rating)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />
                 ))}
               </div>
 
-              <div className="flex items-center justify-center space-x-4">
-                <Avatar className="w-16 h-16">
-                  <AvatarImage src={currentTestimonial.avatar || "/placeholder.svg"} alt={currentTestimonial.name} />
+              <div className="flex items-center justify-center space-x-4 shrink-0 h-[4.5rem]">
+                <Avatar className="w-16 h-16 shrink-0">
+                  <AvatarImage
+                    src={currentTestimonial.avatar}
+                    alt={currentTestimonial.name}
+                    className="object-cover"
+                  />
                   <AvatarFallback className="bg-gradient-to-br from-brand-800 to-brand-600 text-white">
                     {currentTestimonial.name
                       .split(" ")
@@ -126,12 +130,12 @@ export function TestimonialsSection() {
                       .join("")}
                   </AvatarFallback>
                 </Avatar>
-                <div className="text-center">
-                  <h4 className="font-semibold text-slate-900 dark:text-white">{currentTestimonial.name}</h4>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">
+                <div className="text-center min-w-0">
+                  <h4 className="font-semibold text-slate-900 dark:text-white truncate">{currentTestimonial.name}</h4>
+                  <p className="text-sm text-slate-600 dark:text-slate-400 truncate">
                     {currentTestimonial.role} • {currentTestimonial.location}
                   </p>
-                  <p className="text-xs text-brand-700 dark:text-brand-300 mt-1">
+                  <p className="text-xs text-brand-700 dark:text-brand-300 mt-1 truncate">
                     {currentTestimonial.service} • {currentTestimonial.project}
                   </p>
                 </div>
@@ -177,14 +181,14 @@ export function TestimonialsSection() {
         </div>
 
         {/* All testimonials grid */}
-        <div className="grid md:grid-cols-2 xl:grid-cols-5 gap-6 mt-16">
+        <div className="grid md:grid-cols-2 xl:grid-cols-5 gap-6 mt-16 items-stretch">
           {testimonials.map((testimonial) => (
             <Card
               key={testimonial.id}
-              className="bg-white/40 dark:bg-slate-800/40 backdrop-blur-sm border border-white/20 hover:bg-white/60 dark:hover:bg-slate-800/60 transition-all duration-300"
+              className="h-full flex flex-col bg-white/40 dark:bg-slate-800/40 backdrop-blur-sm border border-white/20 hover:bg-white/60 dark:hover:bg-slate-800/60 transition-all duration-300"
             >
-              <CardContent className="p-6">
-                <div className="flex items-center justify-between mb-4">
+              <CardContent className="p-6 flex flex-1 flex-col">
+                <div className="flex items-center justify-between mb-4 shrink-0">
                   <div className="flex items-center">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-4 h-4 text-yellow-500 fill-current" />
@@ -192,12 +196,12 @@ export function TestimonialsSection() {
                   </div>
                   <span className="text-xs font-semibold text-brand-700 dark:text-brand-300">{testimonial.service}</span>
                 </div>
-                <p className="text-sm text-slate-600 dark:text-slate-300 mb-4">
-                  "{testimonial.text.substring(0, 120)}..."
+                <p className="text-sm text-slate-600 dark:text-slate-300 mb-4 line-clamp-5 min-h-[6.25rem] flex-1">
+                  "{testimonial.text}"
                 </p>
-                <div className="flex items-center space-x-3">
-                  <Avatar className="w-10 h-10">
-                    <AvatarImage src={testimonial.avatar || "/placeholder.svg"} alt={testimonial.name} />
+                <div className="mt-auto flex items-center space-x-3 h-10 shrink-0">
+                  <Avatar className="w-10 h-10 shrink-0">
+                    <AvatarImage src={testimonial.avatar} alt={testimonial.name} className="object-cover" />
                     <AvatarFallback className="bg-gradient-to-br from-brand-800 to-brand-600 text-white text-sm">
                       {testimonial.name
                         .split(" ")
@@ -205,9 +209,9 @@ export function TestimonialsSection() {
                         .join("")}
                     </AvatarFallback>
                   </Avatar>
-                  <div>
-                    <h5 className="font-medium text-slate-900 dark:text-white text-sm">{testimonial.name}</h5>
-                    <p className="text-xs text-slate-500 dark:text-slate-400">{testimonial.role}</p>
+                  <div className="min-w-0">
+                    <h5 className="font-medium text-slate-900 dark:text-white text-sm truncate">{testimonial.name}</h5>
+                    <p className="text-xs text-slate-500 dark:text-slate-400 truncate">{testimonial.role}</p>
                   </div>
                 </div>
               </CardContent>

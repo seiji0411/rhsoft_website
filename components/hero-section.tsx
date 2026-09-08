@@ -11,22 +11,25 @@ const slides = [
     title: "Web Development",
     subtitle: "APIs and Platforms That Scale",
     description: "We design and build reliable web services — from REST and GraphQL APIs to backend platforms that connect your products, partners, and customers. Secure, documented, and ready to grow with you.",
-    image: "/assets/hero.jpg",
+    image: "/assets/hero-web.png",
     cta: "View Our Services",
+    href: "/services",
   },
   {
     title: "Blockchain & AI",
     subtitle: "Intelligent Systems on Trusted Infrastructure",
     description: "We build blockchain applications and AI-powered products — from smart contracts and decentralized platforms to machine learning models that automate decisions and unlock new capabilities.",
-    image: "/assets/hero.jpg",
+    image: "/assets/hero-blockchain-ai.png",
     cta: "View Our Portfolio",
+    href: "/portfolio",
   },
   {
     title: "Product Engineering",
     subtitle: "From Idea to Production",
     description: "Partner with us to turn a concept into a production-ready product. We cover strategy, design, development, and ongoing support so you can ship with confidence.",
-    image: "/assets/hero.jpg",
+    image: "/assets/hero-product.png",
     cta: "Get Quote",
+    href: "/contact",
   },
 ]
 
@@ -81,7 +84,7 @@ export function HeroSection() {
                 size="lg"
                 className="bg-gradient-to-r from-brand-800 to-brand-600 hover:from-brand-900 hover:to-brand-700 text-white px-8 py-4 text-lg"
               >
-                <Link href="/services">
+                <Link href={slides[currentSlide].href}>
                   {slides[currentSlide].cta}
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -127,25 +130,32 @@ export function HeroSection() {
 
           {/* Image/Visual */}
           <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden bg-white/20 dark:bg-slate-800/20 backdrop-blur-sm border border-white/30 p-8">
-              <img
-                src={slides[currentSlide].image || "/placeholder.svg"}
-                alt={slides[currentSlide].title}
-                className="w-full h-96 object-cover rounded-xl"
-              />
-
-              <div className="absolute inset-8 rounded-xl bg-gradient-to-t from-black/20 to-transparent" />
+            <div className="absolute -inset-6 bg-gradient-to-br from-blue-400/30 via-indigo-400/20 to-violet-400/25 blur-3xl rounded-full pointer-events-none" />
+            <div className="relative rounded-2xl overflow-hidden bg-brand-950/50 dark:bg-brand-950/70 backdrop-blur-sm border border-white/20 p-3 md:p-4 shadow-2xl shadow-brand-900/40">
+              <div className="relative aspect-video w-full rounded-xl overflow-hidden bg-[#091731]">
+                {slides.map((slide, index) => (
+                  <img
+                    key={slide.image}
+                    src={slide.image}
+                    alt={slide.title}
+                    className={cn(
+                      "absolute inset-0 w-full h-full object-contain transition-opacity duration-700 ease-in-out",
+                      index === currentSlide ? "opacity-100" : "opacity-0",
+                    )}
+                  />
+                ))}
+              </div>
             </div>
 
             {/* Slide indicators */}
             <div className="flex justify-center mt-6 space-x-2">
-              {slides.map((_, index) => (
+              {slides.map((slide, index) => (
                 <button
-                  key={index}
+                  key={slide.title}
                   onClick={() => setCurrentSlide(index)}
                   className={cn(
-                    "w-3 h-3 rounded-full transition-all duration-300",
-                    index === currentSlide ? "bg-brand-800 w-8" : "bg-white/40 hover:bg-white/60",
+                    "h-3 rounded-full transition-all duration-300",
+                    index === currentSlide ? "bg-brand-800 w-8" : "bg-white/40 hover:bg-white/60 w-3",
                   )}
                   title={`Go to slide ${index + 1}`}
                   aria-label={`Go to slide ${index + 1}`}

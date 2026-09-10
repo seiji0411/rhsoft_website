@@ -116,7 +116,7 @@ export default function PrivacyPage() {
 
           <div className="space-y-10 text-slate-700 dark:text-slate-300 leading-relaxed">
             <p className="text-sm bg-white/60 dark:bg-slate-800/60 border border-white/30 rounded-xl p-4">
-              This policy covers rhsoft.com and related RhSoft sites. A signed statement of work or data processing
+              This policy covers rhsoft.co.uk and related RhSoft sites. A signed statement of work or data processing
               addendum (DPA) controls if it conflicts with this page. We do not sell personal information.
             </p>
 
@@ -334,8 +334,8 @@ export default function PrivacyPage() {
                       <h3 className="font-semibold text-slate-900 dark:text-white">Privacy requests</h3>
                       <p className="text-sm mt-1">
                         Email{" "}
-                        <a href="mailto:seijiito1102@gmail.com" className="text-brand-700 dark:text-brand-300 hover:underline">
-                          seijiito1102@gmail.com
+                        <a href="mailto:support@rhsoft.co.uk" className="text-brand-700 dark:text-brand-300 hover:underline">
+                          support@rhsoft.co.uk
                         </a>{" "}
                         or call{" "}
                         <a href="tel:+12135451265" className="text-brand-700 dark:text-brand-300 hover:underline">

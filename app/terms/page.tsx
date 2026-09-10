@@ -129,7 +129,7 @@ export default function TermsPage() {
             <section id="agreement" className="scroll-mt-24">
               <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">1. Agreement</h2>
               <p className="mb-3">
-                By accessing rhsoft.com (or any RhSoft site), requesting a quote, or engaging us to design, build, or
+                By accessing rhsoft.co.uk (or any RhSoft site), requesting a quote, or engaging us to design, build, or
                 support software, you agree to these Terms of Service. If you use the site or services on behalf of a
                 company, you represent that you have authority to bind that company.
               </p>
@@ -226,7 +226,7 @@ export default function TermsPage() {
               </p>
               <p>
                 Portfolio: unless you opt out in writing, we may describe the engagement at a high level (name, stack,
-                screenshots of public UI) on rhsoft.com. Confidential algorithms and unreleased products stay off the
+                screenshots of public UI) on rhsoft.co.uk. Confidential algorithms and unreleased products stay off the
                 public portfolio.
               </p>
             </section>
@@ -378,8 +378,8 @@ export default function TermsPage() {
                       <h3 className="font-semibold text-slate-900 dark:text-white">Questions about these terms</h3>
                       <p className="text-sm mt-1">
                         Email{" "}
-                        <a href="mailto:seijiito1102@gmail.com" className="text-brand-700 dark:text-brand-300 hover:underline">
-                          seijiito1102@gmail.com
+                        <a href="mailto:support@rhsoft.co.uk" className="text-brand-700 dark:text-brand-300 hover:underline">
+                          support@rhsoft.co.uk
                         </a>{" "}
                         or call{" "}
                         <a href="tel:+12135451265" className="text-brand-700 dark:text-brand-300 hover:underline">

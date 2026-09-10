@@ -4,7 +4,7 @@ import nodemailer from "nodemailer"
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST,
   port: Number(process.env.SMTP_PORT),
-  secure: true, // true for port 465, false for 587
+  secure: Number(process.env.SMTP_PORT) === 465 ? true : false, // true for port 465, false for 587
   auth: {
     user: process.env.SMTP_USER,
     pass: process.env.SMTP_PASS,
@@ -78,10 +78,10 @@ interface QuoteData {
   preferredDate?: string
 }
 
-const FROM_EMAIL = process.env.FROM_EMAIL || "seijiito1102@gmail.com"
-const CONTACT_EMAIL = process.env.CONTACT_EMAIL || "seijiito1102@gmail.com"
-const SALES_EMAIL = process.env.SALES_EMAIL || "seijiito1102@gmail.com"
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://rhsoft.com"
+const FROM_EMAIL = process.env.FROM_EMAIL || "support@rhsoft.co.uk"
+const CONTACT_EMAIL = process.env.CONTACT_EMAIL || "contact@rhsoft.co.uk"
+const SALES_EMAIL = process.env.SALES_EMAIL || "support@rhsoft.co.uk"
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://rhsoft.co.uk"
 
 export async function sendContactNotification(data: ContactData): Promise<EmailResult> {
   try {
@@ -249,7 +249,7 @@ function generateContactConfirmationHTML(firstName: string): string {
           <div class="contact-info">
             <h3>Need immediate assistance?</h3>
             <p><strong>📱 Call us:</strong> +1 (213) 545-1265</p>
-            <p><strong>📧 Email:</strong> seijiito1102@gmail.com</p>
+            <p><strong>📧 Email:</strong> support@rhsoft.co.uk</p>
             <p><strong>🕒 Hours:</strong> 24hr</p>
           </div>
           
@@ -445,7 +445,7 @@ function generateQuoteConfirmationHTML(firstName: string, quoteId: string): stri
           <div class="contact-info">
             <h3>Questions or urgent requirements?</h3>
             <p><strong>📱 Call us:</strong> +1 (213) 545-1265</p>
-            <p><strong>📧 Email:</strong> seijiito1102@gmail.com</p>
+            <p><strong>📧 Email:</strong> support@rhsoft.co.uk</p>
             <p><strong>💬 Reference:</strong> Quote ID ${quoteId}</p>
           </div>
           
@@ -489,7 +489,7 @@ We have received your message and will get back to you within 24 hours.
 
 For immediate assistance:
 Phone: +1 (213) 545-1265
-Email: seijiito1102@gmail.com
+Email: support@rhsoft.co.uk
 
 Best regards,
 The RhSoft Team
@@ -542,7 +542,7 @@ Timeline:
 
 Questions? Contact us:
 Phone: +1 (213) 545-1265
-Email: seijiito1102@gmail.com
+Email: support@rhsoft.co.uk
 Reference: Quote ID ${quoteId}
 
 Best regards,

@@ -1,7 +1,13 @@
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import { Facebook, Twitter, Instagram, Linkedin, Phone, Mail, MapPin, Clock, Github } from "lucide-react"
+
+const socialLinks = {
+  // facebook: "https://www.facebook.com/profile.php?id=61572219296564",
+  // twitter: "https://x.com/rhsoft_org",
+  // instagram: "https://www.instagram.com/rhsoft_org/",
+  linkedin: "https://www.linkedin.com/company/rhsoft-org/",
+  github: "https://github.com/RhSoftOrg",
+}
 
 export function Footer() {
   return (
@@ -18,23 +24,23 @@ export function Footer() {
               RHSoft is a software development company that provides custom software solutions for businesses. Transforming visions into reality with
               expert craftsmanship and innovative software solutions.
             </p>
-            {/* <div className="flex space-x-4">
-              <Button size="icon" variant="ghost" className="hover:bg-brand-700">
+            <div className="flex space-x-4">
+              {/* <Link href={socialLinks.facebook} target="_blank" className="hover:bg-brand-700 size-10 flex items-center justify-center rounded-full">
                 <Facebook className="w-5 h-5" />
-              </Button>
-              <Button size="icon" variant="ghost" className="hover:bg-brand-700">
+              </Link>
+              <Link href={socialLinks.twitter} target="_blank" className="hover:bg-brand-700 size-10 flex items-center justify-center rounded-full">
                 <Twitter className="w-5 h-5" />
-              </Button>
-              <Button size="icon" variant="ghost" className="hover:bg-brand-700">
+              </Link>
+              <Link href={socialLinks.instagram} target="_blank" className="hover:bg-brand-700 size-10 flex items-center justify-center rounded-full">
                 <Instagram className="w-5 h-5" />
-              </Button>
-              <Button size="icon" variant="ghost" className="hover:bg-brand-700">
+              </Link> */}
+              <Link href={socialLinks.linkedin} target="_blank" className="hover:bg-brand-700 size-10 flex items-center justify-center rounded-full">
                 <Linkedin className="w-5 h-5" />
-              </Button>
-              <Button size="icon" variant="ghost" className="hover:bg-brand-700">
+              </Link>
+              <Link href={socialLinks.github} target="_blank" className="hover:bg-brand-700 size-10 flex items-center justify-center rounded-full">
                 <Github className="w-5 h-5" />
-              </Button>
-            </div> */}
+              </Link>
+            </div>
           </div>
 
           {/* Quick Links */}

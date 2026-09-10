@@ -34,9 +34,9 @@ export function Footer() {
               <Link href={socialLinks.instagram} target="_blank" className="hover:bg-brand-700 size-10 flex items-center justify-center rounded-full">
                 <Instagram className="w-5 h-5" />
               </Link> */}
-              <Link href={socialLinks.linkedin} target="_blank" className="hover:bg-brand-700 size-10 flex items-center justify-center rounded-full">
+              {/* <Link href={socialLinks.linkedin} target="_blank" className="hover:bg-brand-700 size-10 flex items-center justify-center rounded-full">
                 <Linkedin className="w-5 h-5" />
-              </Link>
+              </Link> */}
               <Link href={socialLinks.github} target="_blank" className="hover:bg-brand-700 size-10 flex items-center justify-center rounded-full">
                 <Github className="w-5 h-5" />
               </Link>

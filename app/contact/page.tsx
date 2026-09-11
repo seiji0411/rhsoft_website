@@ -120,8 +120,8 @@ export default function ContactPage() {
                   <MapPin className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="font-semibold text-slate-900 dark:text-white mb-2">Address</h3>
-                <p className="text-slate-600 dark:text-slate-400 text-sm">A1 Business Center, 2nd Floor, Sundar Kapoor Compound,</p>
-                <p className="text-slate-600 dark:text-slate-400 text-sm">Opp Thakur Mall, Dahisar Check Nakka, Mumbai-401107.</p>
+                <p className="text-slate-600 dark:text-slate-400 text-sm">A1 Business Centre, 2nd Floor</p>
+                <p className="text-slate-600 dark:text-slate-400 text-sm">3 Mill Ln, Southwold IP18 6HW, UK</p>
               </CardContent>
             </Card>
 

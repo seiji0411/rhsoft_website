@@ -63,6 +63,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/careers" className="text-slate-300 hover:text-white transition-colors">
+                  Careers
+                </Link>
+              </li>
+              <li>
                 <Link href="/contact" className="text-slate-300 hover:text-white transition-colors">
                   Contact
                 </Link>
@@ -109,7 +114,7 @@ export function Footer() {
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-brand-300 mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-slate-300">York Rd, Southwold IP18 6AN, United Kingdom</p>
+                  <p className="text-slate-300">3 Mill Ln, Southwold IP18 6HW, United Kingdom</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">

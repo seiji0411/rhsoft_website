@@ -24,6 +24,7 @@ export function Navbar() {
     { href: "/", label: "Home" },
     { href: "/services", label: "Services" },
     { href: "/portfolio", label: "Portfolio" },
+    { href: "/careers", label: "Careers" },
     { href: "/contact", label: "Contact" },
   ]
 

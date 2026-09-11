@@ -29,7 +29,7 @@ export default function ServicesPage() {
           <Button
             asChild
             size="lg"
-            className="bg-gradient-to-r from-brand-800 to-brand-600 hover:from-brand-900 hover:to-brand-700"
+            className="bg-gradient-to-r from-brand-800 to-brand-600 hover:from-brand-900 hover:to-brand-700 text-white"
           >
             <Link href="/contact?tab=quote">
               Get Free Consultation
@@ -96,7 +96,7 @@ export default function ServicesPage() {
                       className={`w-full mt-auto ${
                         service.popular
                           ? "bg-gradient-to-r from-brand-800 to-brand-600 hover:from-brand-900 hover:to-brand-700 text-white"
-                          : "bg-white/90 dark:bg-slate-700/80 hover:bg-brand-800 hover:text-white text-black"
+                          : "bg-white/90 dark:bg-slate-700/80 hover:bg-brand-800 hover:text-white text-black dark:text-white"
                       } transition-colors duration-300`}
                     >
                       <Link href="/contact">Contact Us</Link>

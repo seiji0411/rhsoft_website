@@ -535,11 +535,11 @@ export function QuoteForm() {
                 <div className="space-y-1 leading-none">
                   <FormLabel>
                     I agree to the{" "}
-                    <a href="/terms" className="text-brand-700 hover:underline">
+                    <a href="/terms" className="text-brand-700 hover:underline dark:text-brand-300">
                       Terms and Conditions
                     </a>{" "}
                     and{" "}
-                    <a href="/privacy" className="text-brand-700 hover:underline">
+                    <a href="/privacy" className="text-brand-700 hover:underline dark:text-brand-300">
                       Privacy Policy
                     </a>
                     *

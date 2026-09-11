@@ -68,7 +68,7 @@ export default function PortfolioPage() {
                     onClick={() => setSelectedCategory(category)}
                     className={
                       selectedCategory === category
-                        ? "bg-gradient-to-r from-brand-800 to-brand-600 hover:from-brand-900 hover:to-brand-700"
+                        ? "bg-gradient-to-r from-brand-800 to-brand-600 hover:from-brand-900 hover:to-brand-700 text-white"
                         : "bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm border-white/30"
                     }
                   >

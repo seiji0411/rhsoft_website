@@ -220,11 +220,11 @@ export function ContactForm() {
               <div className="space-y-1 leading-none">
                 <FormLabel>
                   I agree to the{" "}
-                  <a href="/terms" className="text-brand-700 hover:underline">
+                  <a href="/terms" className="text-brand-700 hover:underline dark:text-brand-300">
                     Terms and Conditions
                   </a>{" "}
                   and{" "}
-                  <a href="/privacy" className="text-brand-700 hover:underline">
+                  <a href="/privacy" className="text-brand-700 hover:underline dark:text-brand-300">
                     Privacy Policy
                   </a>
                   *
@@ -238,7 +238,7 @@ export function ContactForm() {
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-gradient-to-r from-brand-800 to-brand-600 hover:from-brand-900 hover:to-brand-700"
+          className="w-full bg-gradient-to-r from-brand-800 to-brand-600 hover:from-brand-900 hover:to-brand-700 text-white"
         >
           {isSubmitting ? (
             <>

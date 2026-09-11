@@ -84,7 +84,7 @@ export function CareersJobs() {
                   <ul className="space-y-1.5 text-sm text-slate-600 dark:text-slate-400">
                     {job.responsibilities.map((item) => (
                       <li key={item} className="flex gap-2">
-                        <span className="mt-2 w-1.5 h-1.5 rounded-full bg-brand-800 shrink-0" />
+                        <span className="mt-2 w-1.5 h-1.5 rounded-full bg-brand-800 shrink-0 dark:bg-brand-300" />
                         {item}
                       </li>
                     ))}
@@ -97,21 +97,21 @@ export function CareersJobs() {
                   <ul className="space-y-1.5 text-sm text-slate-600 dark:text-slate-400">
                     {job.requirements.map((item) => (
                       <li key={item} className="flex gap-2">
-                        <span className="mt-2 w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0" />
+                        <span className="mt-2 w-1.5 h-1.5 rounded-full bg-brand-800 shrink-0 dark:bg-brand-300" />
                         {item}
                       </li>
                     ))}
                   </ul>
                 </div>
                 <div className="mt-auto flex gap-2">
-                  <Button asChild className="flex-1 bg-brand-800 hover:bg-brand-700">
+                  <Button asChild className="flex-1 bg-brand-800 hover:bg-brand-700 text-white">
                     <a href={applyHref(job)}>
                       Apply
                       <Mail className="w-4 h-4 ml-2" />
                     </a>
                   </Button>
                   <Button asChild variant="outline" className="flex-1">
-                    <Link href="/contact">
+                    <Link href="/contact" className="bg-slate-600 dark:bg-slate-800 hover:bg-slate-800 dark:hover:bg-slate-700 text-white hover:text-white">
                       Ask us
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>

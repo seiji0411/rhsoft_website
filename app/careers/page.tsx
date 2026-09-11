@@ -58,7 +58,7 @@ export default function CareersPage() {
             and mobile ideas into production products.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button asChild size="lg" className="bg-gradient-to-r from-brand-800 to-brand-600 hover:from-brand-900 hover:to-brand-700">
+            <Button asChild size="lg" className="bg-gradient-to-r from-brand-800 to-brand-600 hover:from-brand-900 hover:to-brand-700 text-white">
               <a href="#open-roles">
                 View open roles
                 <ArrowRight className="ml-2 w-5 h-5" />

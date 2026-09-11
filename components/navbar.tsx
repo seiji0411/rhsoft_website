@@ -46,7 +46,7 @@ export function Navbar() {
               alt="RhSoft Logo"
               className="w-9 h-9 object-contain"
             />
-            <span className="text-xl font-bold bg-gradient-to-r from-brand-800 to-brand-600 bg-clip-text text-transparent">
+            <span className="text-xl font-bold bg-gradient-to-r from-brand-800 to-brand-600 bg-clip-text text-transparent dark:text-white/90">
               RhSoft
             </span>
             </Link>

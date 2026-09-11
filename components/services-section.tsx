@@ -57,7 +57,7 @@ export function ServicesSection() {
                   <ul className="space-y-2 mb-6 flex-1">
                     {service.features.map((feature) => (
                       <li key={feature} className="flex items-center text-sm text-slate-600 dark:text-slate-400">
-                        <div className="w-1.5 h-1.5 bg-brand-800 rounded-full mr-3 flex-shrink-0" />
+                        <div className="w-1.5 h-1.5 bg-brand-800 rounded-full mr-3 flex-shrink-0 dark:bg-brand-300" />
                         {feature}
                       </li>
                     ))}

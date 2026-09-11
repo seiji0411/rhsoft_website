@@ -103,7 +103,7 @@ export function TestimonialsSection() {
           <Card className="bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm border border-white/30 shadow-xl">
             <CardContent className="p-8 md:p-12 flex flex-col min-h-[28rem] md:min-h-[30rem]">
               <div className="flex items-center justify-center mb-8 shrink-0">
-                <Quote className="w-12 h-12 text-brand-500 opacity-50" />
+                <Quote className="w-12 h-12 text-brand-500 opacity-50 dark:text-brand-100" />
               </div>
 
               <blockquote className="text-lg md:text-xl text-center text-slate-700 dark:text-slate-300 mb-8 leading-relaxed flex-1">

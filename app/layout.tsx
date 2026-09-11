@@ -49,7 +49,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <div className="min-h-screen bg-gradient-to-br from-brand-50 via-brand-100 to-brand-200 dark:from-brand-950 dark:via-brand-900 dark:to-brand-800">
-            <CallPopup />
+            {/* <CallPopup /> */}
             <Navbar />
             <main>{children}</main>
             <Footer />

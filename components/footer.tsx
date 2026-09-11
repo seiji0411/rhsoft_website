@@ -109,12 +109,12 @@ export function Footer() {
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-brand-300 mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-slate-300"> 2330 El Camino Real, Tustin, CA 92782</p>
+                  <p className="text-slate-300">York Rd, Southwold IP18 6AN, United Kingdom</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-brand-300 flex-shrink-0" />
-                <p className="text-slate-300">+1 (929) 563-6548</p>
+                <p className="text-slate-300">+1 (213) 545-1265</p>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-brand-300 flex-shrink-0" />

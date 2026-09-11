@@ -65,10 +65,10 @@ export function Navbar() {
 
           {/* Right side */}
           <div className="hidden md:flex items-center space-x-4">
-            <div className="flex items-center space-x-2 text-sm text-slate-600 dark:text-slate-400">
+            {/* <div className="flex items-center space-x-2 text-sm text-slate-600 dark:text-slate-400">
               <Phone className="w-4 h-4" />
               <span>+1 (213) 545-1265</span>
-            </div>
+            </div> */}
             <ThemeToggle />
             {/* <Button
               asChild
@@ -101,7 +101,7 @@ export function Navbar() {
                   {item.label}
                 </Link>
               ))}
-              <div className="pt-4 border-t border-slate-200 dark:border-slate-700">
+              {/* <div className="pt-4 border-t border-slate-200 dark:border-slate-700">
                 <div className="flex items-center space-x-2 text-sm text-slate-600 dark:text-slate-400 mb-4">
                   <Phone className="w-4 h-4" />
                   <span>+1 (213) 545-1265</span>
@@ -112,7 +112,7 @@ export function Navbar() {
                 >
                   <Link href="/contact?tab=quote">Get Quote</Link>
                 </Button>
-              </div>
+              </div> */}
             </div>
           </div>
         )}

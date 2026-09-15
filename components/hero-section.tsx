@@ -20,16 +20,16 @@ const slides = [
     subtitle: "Intelligent Systems on Trusted Infrastructure",
     description: "We build blockchain applications and AI-powered products — from smart contracts and decentralized platforms to machine learning models that automate decisions and unlock new capabilities.",
     image: "/assets/hero-blockchain-ai.png",
-    cta: "View Our Portfolio",
-    href: "/portfolio",
+    cta: "View Our Services",
+    href: "/services",
   },
   {
     title: "Product Engineering",
     subtitle: "From Idea to Production",
     description: "Partner with us to turn a concept into a production-ready product. We cover strategy, design, development, and ongoing support so you can ship with confidence.",
     image: "/assets/hero-product.png",
-    cta: "Get Quote",
-    href: "/contact",
+    cta: "View Our Services",
+    href: "/services",
   },
 ]
 
@@ -86,17 +86,6 @@ export function HeroSection() {
               >
                 <Link href={slides[currentSlide].href}>
                   {slides[currentSlide].cta}
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-2 border-brand-500/30 bg-white/20 dark:bg-slate-800/20 backdrop-blur-sm hover:bg-white/30 dark:hover:bg-slate-800/30 px-8 py-4 text-lg"
-              >
-                <Link href="/portfolio">
-                  Our Portfolio
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>

@@ -5,7 +5,6 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
-import { CallPopup } from "@/components/call-popup"
 
 const inter = Inter({ subsets: ["latin"] })
 

@@ -28,7 +28,7 @@ export function PortfolioSection() {
             </span>
           </h2>
           <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto mb-8">
-            Explore recent software, blockchain, web, and mobile products we have delivered
+            Explore AI, blockchain, web, and mobile products we have delivered
           </p>
 
           {/* Category Filter */}
@@ -63,31 +63,6 @@ export function PortfolioSection() {
                   className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  {project.url ? (
-                    <Button
-                      size="sm"
-                      asChild
-                      className="bg-white/20 backdrop-blur-sm border border-white/30 text-white hover:bg-white/30"
-                    >
-                      <a href={project.url} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        View Project
-                      </a>
-                    </Button>
-                  ) : (
-                    <Button
-                      size="sm"
-                      asChild
-                      className="bg-white/20 backdrop-blur-sm border border-white/30 text-white hover:bg-white/30"
-                    >
-                      <Link href="/portfolio">
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        View Details
-                      </Link>
-                    </Button>
-                  )}
-                </div>
                 <Badge className="absolute top-4 right-4 bg-brand-800/80 backdrop-blur-sm">{project.category}</Badge>
               </div>
               <CardContent className="p-6">

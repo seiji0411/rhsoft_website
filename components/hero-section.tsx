@@ -8,28 +8,31 @@ import Link from "next/link"
 
 const slides = [
   {
+    title: "AI & Automation",
+    subtitle: "SaaS, Agents, and Process Automation",
+    description:
+      "AI-powered SaaS, agent development, LLM applications, prompt engineering, and business process automation — products that think, act, and save real hours.",
+    image: "/assets/hero-ai.png",
+    cta: "View Our Portfolio",
+    href: "/portfolio",
+  },
+  {
+    title: "Blockchain Development",
+    subtitle: "DeFi, NFTs, and Trading Systems",
+    description:
+      "DeFi dapps, NFT marketplaces, and crypto trading scripts — smart contracts and production UIs your users can actually use on-chain.",
+    image: "/assets/hero-blockchain.png",
+    cta: "View Our Portfolio",
+    href: "/portfolio",
+  },
+  {
     title: "Web Development",
-    subtitle: "APIs and Platforms That Scale",
-    description: "We design and build reliable web services — from REST and GraphQL APIs to backend platforms that connect your products, partners, and customers. Secure, documented, and ready to grow with you.",
+    subtitle: "SaaS, CMS, and Ecommerce Platforms",
+    description:
+      "Multi-tenant SaaS, content platforms, and online stores — dashboards, APIs, billing, and cloud hosting that scale with your customers.",
     image: "/assets/hero-web.png",
-    cta: "View Our Services",
-    href: "/services",
-  },
-  {
-    title: "Blockchain & AI",
-    subtitle: "Intelligent Systems on Trusted Infrastructure",
-    description: "We build blockchain applications and AI-powered products — from smart contracts and decentralized platforms to machine learning models that automate decisions and unlock new capabilities.",
-    image: "/assets/hero-blockchain-ai.png",
-    cta: "View Our Services",
-    href: "/services",
-  },
-  {
-    title: "Product Engineering",
-    subtitle: "From Idea to Production",
-    description: "Partner with us to turn a concept into a production-ready product. We cover strategy, design, development, and ongoing support so you can ship with confidence.",
-    image: "/assets/hero-product.png",
-    cta: "View Our Services",
-    href: "/services",
+    cta: "View Our Portfolio",
+    href: "/portfolio",
   },
 ]
 
@@ -41,7 +44,7 @@ export function HeroSection() {
       setCurrentSlide((prev) => (prev + 1) % slides.length)
     }, 5000)
     return () => clearInterval(timer)
-  }, [])
+  }, [currentSlide])
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">

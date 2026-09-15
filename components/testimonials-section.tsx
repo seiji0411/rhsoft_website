@@ -51,6 +51,17 @@ const testimonials = [
     text: "Our store, checkout, and seller tools finally work as one product. RhSoft rebuilt the catalog, inventory, and admin dashboard so we convert more orders without fighting the backend every week.",
     project: "E-commerce store & seller tools",
   },
+  {
+    id: 5,
+    name: "Marisol Vega",
+    role: "Head of Operations",
+    location: "Mexico City",
+    avatar: "/assets/testimonials/marisol-vega.jpg",
+    rating: 5,
+    service: "Automation",
+    text: "Intake, document routing, and handoffs used to eat half the week. RhSoft automated those workflows so the team only touches exceptions. We recovered hours every day without ripping out the systems we already had.",
+    project: "Business process automation",
+  },
 ]
 
 export function TestimonialsSection() {
@@ -83,7 +94,7 @@ export function TestimonialsSection() {
             </span>
           </h2>
           <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-            Clients across AI, blockchain, web, and e-commerce
+            Clients across AI, automation, blockchain, web, and e-commerce
           </p>
         </div>
 

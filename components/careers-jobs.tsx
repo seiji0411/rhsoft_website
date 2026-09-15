@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/badge"
 import { MapPin, ArrowRight, Mail } from "lucide-react"
 import { jobs, type Job } from "@/lib/careers"
 
-const filters = ["All", "AI", "Blockchain", "Web", "Mobile", "Design", "General"] as const
+const filters = ["All", "AI", "Blockchain", "Web", "Design", "General"] as const
 
 function applyHref(job: Job) {
   const subject = encodeURIComponent(`Application: ${job.title}`)

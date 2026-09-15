@@ -49,7 +49,7 @@ const collectCards = [
   {
     icon: Database,
     title: "Project details",
-    text: "Scope notes, tech stack, files you upload, repositories you grant access to, and messages about AI, blockchain, web, e-commerce, or mobile work.",
+    text: "Scope notes, tech stack, files you upload, repositories you grant access to, and messages about AI, blockchain, web, or e-commerce work.",
   },
   {
     icon: Globe2,
@@ -79,7 +79,7 @@ export default function PrivacyPage() {
           </h1>
           <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mb-6">
             How RhSoft collects, uses, stores, and shares personal data when you visit our website or work with us on
-            software — AI, blockchain, web, e-commerce, and mobile.
+            software — AI, blockchain, web, and e-commerce.
           </p>
           <p className="text-sm text-slate-500 dark:text-slate-400">Last updated: September 7, 2026</p>
         </div>
@@ -165,7 +165,7 @@ export default function PrivacyPage() {
               <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">3. How we use data</h2>
               <ul className="list-disc pl-5 space-y-2">
                 <li>Answer contact and quote requests and send confirmation emails.</li>
-                <li>Prepare proposals, SOWs, and technical estimates for AI, blockchain, web, e-commerce, and mobile work.</li>
+                <li>Prepare proposals, SOWs, and technical estimates for AI, blockchain, web, and e-commerce work.</li>
                 <li>Deliver, support, and invoice contracted software projects.</li>
                 <li>Improve the website, diagnose errors, and measure which pages help visitors.</li>
                 <li>Comply with law, enforce our{" "}
@@ -217,7 +217,7 @@ export default function PrivacyPage() {
                 </li>
                 <li>
                   <strong className="text-slate-900 dark:text-white">Cloud & tools on projects.</strong> If you grant
-                  access, data may sit in AWS, GCP, Vercel, GitHub, Supabase, Firebase, app-store consoles, or similar
+                  access, data may sit in AWS, GCP, Vercel, GitHub, Supabase, Firebase, or similar
                   tools you approve in an SOW.
                 </li>
                 <li>

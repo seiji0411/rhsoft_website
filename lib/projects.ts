@@ -1,7 +1,7 @@
 export type Project = {
   id: number
   title: string
-  category: "AI & Automation" | "Blockchain" | "Web" | "Mobile"
+  category: "AI & Automation" | "Blockchain" | "Web"
   location: string
   date?: string
   image: string
@@ -117,48 +117,15 @@ export const projects: Project[] = [
     id: 10,
     title: "Ecommerce platform",
     category: "Web",
-    location: "Web · Mobile",
+    location: "Web",
     image: image("ecommerce_platform"),
     description:
       "Online stores and seller tools — catalog, checkout, inventory, payments, and admin dashboards built to convert.",
     tags: ["WooCommerce", "Laravel", "Checkout", "Inventory"],
     featured: true,
   },
-  {
-    id: 11,
-    title: "Android app",
-    category: "Mobile",
-    location: "Google Play",
-    image: image("android_app"),
-    description:
-      "Native Android apps — chat, social, streaming, and commerce experiences that feel fast on the devices people actually use.",
-    tags: ["Android", "Kotlin", "Play Store", "Mobile"],
-    featured: true,
-  },
-  {
-    id: 12,
-    title: "Apple app",
-    category: "Mobile",
-    location: "App Store",
-    image: image("apple_app"),
-    description:
-      "Native iOS apps — polished UI, store listings, and production releases on the App Store.",
-    tags: ["iOS", "Swift", "App Store", "Mobile"],
-    featured: true,
-  },
-  {
-    id: 13,
-    title: "Hybrid app development",
-    category: "Mobile",
-    location: "iOS · Android",
-    image: image("hybrid_app"),
-    description:
-      "One codebase, two stores — React Native apps that ship to iOS and Android with shared product logic and native feel.",
-    tags: ["React Native", "iOS", "Android", "Hybrid"],
-    featured: true,
-  },
 ]
 
-export const projectCategories = ["All", "AI & Automation", "Blockchain", "Web", "Mobile"] as const
+export const projectCategories = ["All", "AI & Automation", "Blockchain", "Web"] as const
 
 export const featuredProjects = projects.filter((project) => project.featured)

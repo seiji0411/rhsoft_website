@@ -9,7 +9,6 @@ import {
   Blocks,
   Globe,
   ShoppingCart,
-  Smartphone,
   Shield,
   Scale,
   Mail,
@@ -19,7 +18,7 @@ import {
 export const metadata: Metadata = {
   title: "Terms of Service | RhSoft",
   description:
-    "Terms of service for RhSoft software development — AI, blockchain, web, e-commerce, and mobile engagements.",
+    "Terms of service for RhSoft software development — AI, blockchain, web, and e-commerce engagements.",
 }
 
 const toc = [
@@ -62,11 +61,6 @@ const serviceScopes = [
     title: "E-commerce",
     text: "Storefronts, checkout, inventory, seller tools, and admin dashboards. Payment processors, tax, and shipping carriers are separate vendors with their own terms.",
   },
-  {
-    icon: Smartphone,
-    title: "Mobile",
-    text: "iOS and Android apps, including React Native. App Store and Play Store review, policies, and fees are controlled by Apple and Google, not RhSoft.",
-  },
 ]
 
 export default function TermsPage() {
@@ -85,7 +79,7 @@ export default function TermsPage() {
           </h1>
           <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mb-6">
             These terms govern your use of the RhSoft website and our software development services — AI, blockchain,
-            web, e-commerce, and mobile.
+            web, and e-commerce.
           </p>
           <p className="text-sm text-slate-500 dark:text-slate-400">Last updated: September 7, 2026</p>
         </div>
@@ -234,8 +228,8 @@ export default function TermsPage() {
             <section id="open-source" className="scroll-mt-24">
               <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">6. Open source and third-party software</h2>
               <p>
-                Deliverables often include open-source components (for example React, Next.js, Laravel, Solidity
-                libraries, or React Native). Those components stay under their own licenses (MIT, Apache-2.0, GPL, and
+                Deliverables often include open-source components (for example React, Next.js, Laravel, or Solidity
+                libraries). Those components stay under their own licenses (MIT, Apache-2.0, GPL, and
                 others). You are responsible for complying with those licenses in distribution. We will identify known
                 GPL or similarly copyleft components when we introduce them. SaaS APIs, maps, email, payments, and AI
                 model hosts are licensed by their vendors; we do not warrant their ongoing availability or pricing.

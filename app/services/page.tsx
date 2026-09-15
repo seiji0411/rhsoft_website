@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Brain, Blocks, Globe, ShoppingCart, Smartphone, CheckCircle, ArrowRight, type LucideIcon } from "lucide-react"
+import { Brain, Blocks, Globe, ShoppingCart, CheckCircle, ArrowRight, type LucideIcon } from "lucide-react"
 import Link from "next/link"
 import { services, type Service } from "@/lib/services"
 
@@ -10,7 +10,6 @@ const serviceIcons: Record<Service["slug"], LucideIcon> = {
   blockchain: Blocks,
   web: Globe,
   ecommerce: ShoppingCart,
-  mobile: Smartphone,
 }
 
 export default function ServicesPage() {
@@ -24,7 +23,7 @@ export default function ServicesPage() {
             </span>
           </h1>
           <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto mb-8">
-            AI, blockchain, web, e-commerce, and mobile development — from idea to production.
+            AI, blockchain, web, and e-commerce development — from idea to production.
           </p>
           <Button
             asChild
@@ -41,7 +40,7 @@ export default function ServicesPage() {
 
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {services.map((service) => {
               const Icon = serviceIcons[service.slug]
               return (

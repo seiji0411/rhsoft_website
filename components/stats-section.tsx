@@ -29,7 +29,7 @@ const stats = [
     suffix: "+",
     decimals: 0,
     label: "Projects Completed",
-    description: "AI, blockchain, web, and mobile",
+    description: "AI, blockchain, web, and e-commerce",
   },
   {
     icon: Star,
@@ -88,8 +88,8 @@ export function StatsSection() {
               </span>
             </h2>
             <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-8">
-              RhSoft is a software studio that turns ideas into production products. From AI and blockchain to web,
-              e-commerce, and mobile apps, we partner with you to design, build, and launch systems that actually run in
+              RhSoft is a software studio that turns ideas into production products. From AI and blockchain to web and
+              e-commerce, we partner with you to design, build, and launch systems that actually run in
               the real world.
             </p>
             <Button

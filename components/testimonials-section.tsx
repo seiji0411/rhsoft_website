@@ -51,17 +51,6 @@ const testimonials = [
     text: "Our store, checkout, and seller tools finally work as one product. RhSoft rebuilt the catalog, inventory, and admin dashboard so we convert more orders without fighting the backend every week.",
     project: "E-commerce store & seller tools",
   },
-  {
-    id: 5,
-    name: "James Whitfield",
-    role: "Product Director",
-    location: "Austin",
-    avatar: "/assets/testimonials/james-whitfield.jpg?v=2",
-    rating: 5,
-    service: "Mobile",
-    text: "The iOS and Android apps feel native, fast, and easy to extend. RhSoft handled React Native, chat, and store listings end to end — we shipped to the App Store and Play Store on the timeline we promised.",
-    project: "iOS & Android consumer app",
-  },
 ]
 
 export function TestimonialsSection() {
@@ -85,7 +74,7 @@ export function TestimonialsSection() {
   const currentTestimonial = testimonials[currentIndex]
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50/80 dark:bg-slate-900/60">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
@@ -94,7 +83,7 @@ export function TestimonialsSection() {
             </span>
           </h2>
           <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-            Clients across AI, blockchain, web, e-commerce, and mobile
+            Clients across AI, blockchain, web, and e-commerce
           </p>
         </div>
 

@@ -38,7 +38,7 @@ const steps = [
 
 export function ProcessSection() {
   return (
-    <section className="scroll-mt-24 py-20 px-4 sm:px-6 lg:px-8">
+    <section className="scroll-mt-24 py-20 px-4 sm:px-6 lg:px-8 bg-white/70 dark:bg-brand-950/40">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
@@ -80,7 +80,7 @@ export function ProcessSection() {
             <h3 className="text-3xl md:text-4xl font-bold mb-4">Have an idea? Let&apos;s build it.</h3>
             <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto opacity-90">
               Whether you&apos;re looking to automate your business, launch an AI product, build a blockchain solution, or
-              develop a web or mobile application, we&apos;re ready to help.
+              develop a web application, we&apos;re ready to help.
             </p>
             <Button
               asChild

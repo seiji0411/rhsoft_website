@@ -37,7 +37,7 @@ export default function PortfolioPage() {
             </span>
           </h1>
           <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-            Explore AI, blockchain, web, and mobile products delivered for clients worldwide.
+            Explore AI, blockchain, and web products delivered for clients worldwide.
           </p>
         </div>
       </section>

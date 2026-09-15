@@ -104,11 +104,6 @@ export function Footer() {
                   E-commerce
                 </Link>
               </li>
-              <li>
-                <Link href="/services#mobile" className="text-slate-300 hover:text-white transition-colors">
-                  Mobile
-                </Link>
-              </li>
             </ul>
           </div>
 

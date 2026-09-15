@@ -20,13 +20,13 @@ import {
 export const metadata: Metadata = {
   title: "Careers | RhSoft",
   description:
-    "Join RhSoft — remote software roles in AI, blockchain, web, e-commerce, and mobile. Build production products with a high-trust studio.",
+    "Join RhSoft — remote software roles in AI, blockchain, web, and e-commerce. Build production products with a high-trust studio.",
 }
 
 const perks = [
   { icon: Globe, title: "Remote-first", text: "Work from anywhere. Overlap with UK hours for standups and clients." },
-  { icon: Rocket, title: "Production work", text: "Ship to app stores, mainnet, and live traffic — not slide decks." },
-  { icon: Sparkles, title: "Five stacks", text: "AI, blockchain, web, e-commerce, and mobile in one studio." },
+  { icon: Rocket, title: "Production work", text: "Ship to mainnet, cloud, and live traffic — not slide decks." },
+  { icon: Sparkles, title: "Four stacks", text: "AI, blockchain, web, and e-commerce in one studio." },
   { icon: Shield, title: "Senior craft", text: "Reviews, security, and documentation are part of the job." },
   { icon: Heart, title: "Direct impact", text: "Small team. You talk to clients and own features end to end." },
   { icon: Code2, title: "Tools you choose", text: "Modern TypeScript, cloud, and the right language for the product." },
@@ -54,8 +54,8 @@ export default function CareersPage() {
             </span>
           </h1>
           <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mb-8">
-            RhSoft is a remote software studio. Join engineers and designers who turn AI, blockchain, web, e-commerce,
-            and mobile ideas into production products.
+            RhSoft is a remote software studio. Join engineers and designers who turn AI, blockchain, web, and e-commerce
+            ideas into production products.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button asChild size="lg" className="bg-gradient-to-r from-brand-800 to-brand-600 hover:from-brand-900 hover:to-brand-700 text-white">
@@ -71,9 +71,9 @@ export default function CareersPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-14">
             {[
-              { value: "6", label: "Open roles" },
+              { value: "5", label: "Open roles" },
               { value: "Remote", label: "First" },
-              { value: "5", label: "Product stacks" },
+              { value: "4", label: "Product stacks" },
               { value: "UK", label: "Studio hub" },
             ].map((stat) => (
               <Card key={stat.label} className="bg-white/60 dark:bg-slate-800/50 backdrop-blur-sm border-white/30">

@@ -1,7 +1,7 @@
 export type Job = {
   id: string
   title: string
-  team: "AI" | "Blockchain" | "Web" | "Mobile" | "Design" | "General"
+  team: "AI" | "Blockchain" | "Web" | "Design" | "General"
   type: "Full-time" | "Internship"
   location: string
   summary: string
@@ -40,7 +40,7 @@ export const jobs: Job[] = [
     responsibilities: [
       "Prototype and productionize ML and LLM-powered features",
       "Evaluate models, data quality, and failure modes",
-      "Integrate AI into web and mobile products",
+      "Integrate AI into web products and internal tools",
     ],
     requirements: [
       "Hands-on ML or LLM product experience",
@@ -68,32 +68,13 @@ export const jobs: Job[] = [
     ],
   },
   {
-    id: "mobile-engineer",
-    title: "Mobile Engineer",
-    team: "Mobile",
-    type: "Full-time",
-    location: "Remote · UK-friendly",
-    summary:
-      "Build iOS and Android apps with React Native that feel native — chat, social, streaming, and commerce.",
-    responsibilities: [
-      "Ship and maintain React Native apps on both stores",
-      "Own performance, offline behavior, and store releases",
-      "Collaborate with design and backend on product quality",
-    ],
-    requirements: [
-      "3+ years of iOS, Android, or React Native",
-      "Experience shipping to App Store and Play Store",
-      "Care for UX details and crash-free sessions",
-    ],
-  },
-  {
     id: "product-designer",
     title: "Product Designer",
     team: "Design",
     type: "Full-time",
     location: "Remote · UK-friendly",
     summary:
-      "Design interfaces for AI, blockchain, web, and mobile products — from flows and systems to polished UI.",
+      "Design interfaces for AI, blockchain, web, and e-commerce products — from flows and systems to polished UI.",
     responsibilities: [
       "Turn briefs into user flows, wireframes, and high-fidelity UI",
       "Build and maintain a coherent design system",
@@ -112,7 +93,7 @@ export const jobs: Job[] = [
     type: "Internship",
     location: "Remote",
     summary:
-      "Learn by shipping real client work across web, mobile, AI, or blockchain — with mentorship from senior engineers.",
+      "Learn by shipping real client work across web, AI, or blockchain — with mentorship from senior engineers.",
     responsibilities: [
       "Contribute to features under a mentor",
       "Write tests, docs, and pull requests",
@@ -129,7 +110,7 @@ export const jobs: Job[] = [
 export const careerValues = [
   {
     title: "Ship real products",
-    text: "You work on live AI, blockchain, web, e-commerce, and mobile systems — not throwaway demos.",
+    text: "You work on live AI, blockchain, web, and e-commerce systems — not throwaway demos.",
   },
   {
     title: "Remote, high trust",

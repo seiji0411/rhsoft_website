@@ -28,7 +28,7 @@ export function PortfolioSection() {
             </span>
           </h2>
           <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto mb-8">
-            Explore AI, blockchain, web, and mobile products we have delivered
+            Explore AI, blockchain, and web products we have delivered
           </p>
 
           {/* Category Filter */}

@@ -1,5 +1,5 @@
 export type Service = {
-  slug: "ai" | "blockchain" | "web" | "ecommerce" | "mobile"
+  slug: "ai" | "blockchain" | "web" | "ecommerce"
   title: string
   description: string
   features: string[]
@@ -41,12 +41,5 @@ export const services: Service[] = [
     image: "/assets/services/service-ecommerce.png",
     description: "Online stores and seller tools with checkout, inventory, and admin dashboards built to convert.",
     features: ["WooCommerce and Laravel stores", "Checkout and inventory", "Seller and pricing tools", "Admin dashboards"],
-  },
-  {
-    slug: "mobile",
-    title: "Mobile",
-    image: "/assets/services/service-mobile.png",
-    description: "iOS and Android apps for social, chat, streaming, and commerce — built to feel native and fast.",
-    features: ["iOS and Android apps", "React Native", "Social, chat, and messaging", "Streaming and consumer apps"],
   },
 ]

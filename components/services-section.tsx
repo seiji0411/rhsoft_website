@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Brain, Blocks, Globe, ShoppingCart, Smartphone, type LucideIcon } from "lucide-react"
+import { Brain, Blocks, Globe, ShoppingCart, type LucideIcon } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { services, type Service } from "@/lib/services"
@@ -9,7 +9,6 @@ const serviceIcons: Record<Service["slug"], LucideIcon> = {
   blockchain: Blocks,
   web: Globe,
   ecommerce: ShoppingCart,
-  mobile: Smartphone,
 }
 
 export function ServicesSection() {
@@ -23,11 +22,11 @@ export function ServicesSection() {
             </span>
           </h2>
           <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-            End-to-end software for AI, blockchain, web, e-commerce, and mobile products
+            End-to-end software for AI, blockchain, web, and e-commerce products
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {services.map((service) => {
             const Icon = serviceIcons[service.slug]
             return (

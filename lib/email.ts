@@ -1,15 +1,9 @@
+import net from "net"
+import tls from "tls"
 import nodemailer from "nodemailer"
+import type SMTPTransport from "nodemailer/lib/smtp-transport"
 
-// SMTP transporter setup
-const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST,
-  port: Number(process.env.SMTP_PORT),
-  secure: Number(process.env.SMTP_PORT) === 465 ? true : false, // true for port 465, false for 587
-  auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS,
-  },
-})
+let transporter: nodemailer.Transporter<SMTPTransport.SentMessageInfo> | null = null
 
 function getEmailConfigError(): string | null {
   const requiredVars = ["SMTP_HOST", "SMTP_PORT", "SMTP_USER", "SMTP_PASS", "FROM_EMAIL"] as const
@@ -26,20 +20,117 @@ function getEmailConfigError(): string | null {
   return null
 }
 
-// Helper to send email
-async function sendEmail({ to, subject, html, text }: { to: string; subject: string; html: string; text: string }) {
+function getTransporter(): nodemailer.Transporter<SMTPTransport.SentMessageInfo> {
   const configError = getEmailConfigError()
   if (configError) {
     throw new Error(configError)
   }
 
-  await transporter.sendMail({
-    from: `"RhSoft" <${process.env.FROM_EMAIL}>`,
+  if (transporter) {
+    return transporter
+  }
+
+  const host = process.env.SMTP_HOST as string
+  const port = Number(process.env.SMTP_PORT)
+  const secure = port === 465
+  const user = process.env.SMTP_USER as string
+  // Gmail app passwords are often copied with spaces; SMTP auth requires 16 characters with no spaces.
+  const pass = (process.env.SMTP_PASS as string).replace(/\s+/g, "")
+
+  // Do not set `service: "gmail"` together with host/port. That well-known preset overrides 587 with 465.
+  // Connect by hostname (OS DNS) instead of nodemailer's random A-record, which was picking slow Gmail IPs.
+  const options: SMTPTransport.Options = {
+    host,
+    port,
+    secure,
+    requireTLS: port === 587,
+    auth: {
+      user,
+      pass,
+    },
+    tls: {
+      minVersion: "TLSv1.2",
+      servername: host,
+    },
+    connectionTimeout: 60000,
+    greetingTimeout: 60000,
+    socketTimeout: 120000,
+    getSocket(_opts, callback) {
+      connectSmtpSocket(host, port, secure)
+        .then((connection) => callback(null, { connection }))
+        .catch((error) => callback(error, false))
+    },
+  }
+
+  transporter = nodemailer.createTransport(options)
+
+  return transporter
+}
+
+function connectSmtpSocket(host: string, port: number, secure: boolean): Promise<net.Socket> {
+  return new Promise((resolve, reject) => {
+    const onError = (error: Error) => reject(error)
+
+    if (secure) {
+      const socket = tls.connect({
+        host,
+        port,
+        servername: host,
+        minVersion: "TLSv1.2",
+      })
+      socket.once("error", onError)
+      socket.once("secureConnect", () => {
+        socket.removeListener("error", onError)
+        socket.setKeepAlive(true)
+        resolve(socket)
+      })
+      return
+    }
+
+    const socket = net.connect({ host, port })
+    socket.once("error", onError)
+    socket.once("connect", () => {
+      socket.removeListener("error", onError)
+      socket.setKeepAlive(true)
+      resolve(socket)
+    })
+  })
+}
+
+function isRetryableSmtpError(error: unknown) {
+  if (!error || typeof error !== "object") {
+    return false
+  }
+
+  const code = "code" in error ? String(error.code) : ""
+  return code === "ETIMEDOUT" || code === "ESOCKET" || code === "ECONNECTION"
+}
+
+async function sendEmail({ to, subject, html, text }: { to: string; subject: string; html: string; text: string }) {
+  const mailer = getTransporter()
+  const smtpUser = process.env.SMTP_USER as string
+  const fromEmail = process.env.FROM_EMAIL || smtpUser
+
+  const mail = {
+    // Gmail app passwords can only send as the authenticated Gmail account (or a verified alias).
+    from: `"RhSoft" <${smtpUser}>`,
+    replyTo: fromEmail,
     to,
     subject,
     html,
     text,
-  })
+  }
+
+  try {
+    await mailer.sendMail(mail)
+  } catch (error) {
+    if (!isRetryableSmtpError(error)) {
+      throw error
+    }
+
+    // Gmail's 220 greeting is often delayed on this network; one retry usually succeeds.
+    await mailer.sendMail(mail)
+  }
 }
 
 interface EmailResult {
@@ -86,7 +177,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://rhsoft.co.uk"
 export async function sendContactNotification(data: ContactData): Promise<EmailResult> {
   try {
     await sendEmail({
-      to: CONTACT_EMAIL,
+      to: "support@rhsoft.co.uk",
       subject: `New Contact Form Submission: ${data.subject}`,
       html: generateContactNotificationHTML(data),
       text: generateContactNotificationText(data),

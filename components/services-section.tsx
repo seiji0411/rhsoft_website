@@ -39,7 +39,7 @@ export function ServicesSection() {
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute bottom-3 left-3 w-10 h-10 bg-brand-800/90 backdrop-blur-sm rounded-lg flex items-center justify-center">
                       <Icon className="w-5 h-5 text-white" />

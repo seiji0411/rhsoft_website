@@ -8,8 +8,6 @@ import { Badge } from "@/components/ui/badge"
 import { MapPin, ArrowRight, Mail } from "lucide-react"
 import { jobs, type Job } from "@/lib/careers"
 
-const filters = ["All", "AI", "Blockchain", "Web", "Design", "General"] as const
-
 function applyHref(job: Job) {
   const subject = encodeURIComponent(`Application: ${job.title}`)
   const body = encodeURIComponent(
@@ -19,12 +17,6 @@ function applyHref(job: Job) {
 }
 
 export function CareersJobs() {
-  const [filter, setFilter] = useState<(typeof filters)[number]>("All")
-
-  const visible = useMemo(
-    () => (filter === "All" ? jobs : jobs.filter((job) => job.team === filter)),
-    [filter],
-  )
 
   return (
     <section id="open-roles" className="py-20 px-4 sm:px-6 lg:px-8 scroll-mt-24">
@@ -37,30 +29,14 @@ export function CareersJobs() {
               </span>
             </h2>
             <p className="text-slate-600 dark:text-slate-300 max-w-2xl">
-              {visible.length} {visible.length === 1 ? "role" : "roles"}
-              {filter === "All" ? " across the studio" : ` in ${filter}`}. Apply with a CV, GitHub, and a short note.
+              {jobs.length} {jobs.length === 1 ? "role" : "roles"}
+              across the studio. Apply with a CV, GitHub, and a short note.
             </p>
-          </div>
-          <div className="flex flex-wrap gap-2">
-            {filters.map((item) => (
-              <button
-                key={item}
-                type="button"
-                onClick={() => setFilter(item)}
-                className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
-                  filter === item
-                    ? "bg-brand-800 text-white"
-                    : "bg-white/70 dark:bg-slate-800/70 text-slate-600 dark:text-slate-300 hover:bg-white dark:hover:bg-slate-800"
-                }`}
-              >
-                {item}
-              </button>
-            ))}
           </div>
         </div>
 
         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 items-stretch">
-          {visible.map((job) => (
+          {jobs.map((job) => (
             <Card
               key={job.id}
               id={job.id}
@@ -122,7 +98,7 @@ export function CareersJobs() {
           ))}
         </div>
 
-        {visible.length === 0 && (
+        {jobs.length === 0 && (
           <p className="text-center text-slate-500 dark:text-slate-400 py-12">No open roles in this team right now.</p>
         )}
 

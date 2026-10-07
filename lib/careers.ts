@@ -2,7 +2,7 @@ export type Job = {
   id: string
   title: string
   team: "AI" | "Blockchain" | "Web" | "Design" | "General"
-  type: "Full-time" | "Internship"
+  type: "Full-time" | "Internship" | "Part-time" | "Contract"
   location: string
   summary: string
   responsibilities: string[]
@@ -11,98 +11,25 @@ export type Job = {
 
 export const jobs: Job[] = [
   {
-    id: "senior-fullstack",
-    title: "Senior Full-Stack Engineer",
+    id: "full-stack-developer",
+    title: "Full-Stack Developer",
     team: "Web",
-    type: "Full-time",
-    location: "Remote · UK-friendly",
-    summary:
-      "Own APIs, dashboards, and cloud platforms that ship to production — Laravel, Vue, Next.js, and AWS/GCP.",
-    responsibilities: [
-      "Design and ship web apps, REST/GraphQL APIs, and admin dashboards",
-      "Review architecture, code, and cloud deployments",
-      "Work with clients from discovery through launch",
-    ],
-    requirements: [
-      "5+ years building production web products",
-      "Strong TypeScript or PHP, plus modern frontend",
-      "Comfortable with AWS or GCP",
-    ],
-  },
-  {
-    id: "ai-engineer",
-    title: "AI Engineer",
-    team: "AI",
-    type: "Full-time",
-    location: "Remote · UK-friendly",
-    summary:
-      "Build production AI features — models, NLP, computer vision, and automation that clients can actually trust.",
-    responsibilities: [
-      "Prototype and productionize ML and LLM-powered features",
-      "Evaluate models, data quality, and failure modes",
-      "Integrate AI into web products and internal tools",
-    ],
-    requirements: [
-      "Hands-on ML or LLM product experience",
-      "Python plus one of PyTorch, TensorFlow, or similar",
-      "Clear communication with non-ML stakeholders",
-    ],
-  },
-  {
-    id: "blockchain-engineer",
-    title: "Blockchain Engineer",
-    team: "Blockchain",
-    type: "Full-time",
-    location: "Remote · UK-friendly",
-    summary:
-      "Ship secure smart contracts, dapps, token bridges, and NFT platforms — with audits and mainnet discipline.",
-    responsibilities: [
-      "Write and review Solidity or Rust smart contracts",
-      "Integrate wallets, indexers, and dapp frontends",
-      "Help clients understand on-chain risk and operations",
-    ],
-    requirements: [
-      "Shipped on-chain work (DeFi, NFTs, bridges, or similar)",
-      "Solidity or Rust, plus TypeScript for dapps",
-      "Security-first mindset",
-    ],
-  },
-  {
-    id: "product-designer",
-    title: "Product Designer",
-    team: "Design",
-    type: "Full-time",
-    location: "Remote · UK-friendly",
-    summary:
-      "Design interfaces for AI, blockchain, web, and e-commerce products — from flows and systems to polished UI.",
-    responsibilities: [
-      "Turn briefs into user flows, wireframes, and high-fidelity UI",
-      "Build and maintain a coherent design system",
-      "Partner with engineers through launch",
-    ],
-    requirements: [
-      "Portfolio of shipped product work",
-      "Figma fluency and strong visual craft",
-      "Comfort designing for complex software, not just marketing sites",
-    ],
-  },
-  {
-    id: "engineering-intern",
-    title: "Engineering Intern",
-    team: "General",
-    type: "Internship",
+    type: "Contract",
     location: "Remote",
     summary:
-      "Learn by shipping real client work across web, AI, or blockchain — with mentorship from senior engineers.",
+      "Join our team as a Full-Stack Developer and build web/ai-powered applications across the frontend and backend, with mentorship and room to grow.",
     responsibilities: [
-      "Contribute to features under a mentor",
-      "Write tests, docs, and pull requests",
-      "Join standups and reviews on live projects",
+      "Build and maintain features across the frontend and backend of web/ai-powered applications",
+      "Collaborate with the team on technical decisions, reviews, and planning",
+      "Communicate with the team and clients to understand the requirements and deliver the best solution",
+      "Daily stand-ups and progress updates, weekly reviews, and monthly check-ins",
+      "Use AI tools to speed up development while keeping quality high",
     ],
     requirements: [
-      "Personal projects or internships in software",
-      "Hunger to learn production engineering",
-      "Clear written English",
+      "Basic full-stack development knowledge and the ability to learn quickly",
+      "Good English communication skills",
+      "Familiarity with AI tools such as ChatGPT and Claude",
+      "Willingness to learn and improve, and strong collaboration skills",
     ],
   },
 ]

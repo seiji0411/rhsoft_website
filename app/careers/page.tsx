@@ -71,7 +71,7 @@ export default function CareersPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-14">
             {[
-              { value: "5", label: "Open roles" },
+              { value: "1", label: "Open roles" },
               { value: "Remote", label: "First" },
               { value: "4", label: "Product stacks" },
               { value: "UK", label: "Studio hub" },

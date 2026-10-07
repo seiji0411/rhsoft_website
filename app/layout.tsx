@@ -5,10 +5,12 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
+import { siteUrl } from "@/lib/site"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "RhSoft - Software Development Company",
   description: "RhSoft is a software development company that provides custom software solutions for businesses.",
   keywords: [
@@ -32,8 +34,6 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.png" />
-        <meta name="description" content="RHSoft is a software development company that provides custom software solutions for businesses." />
-        <meta name="keywords" content="software development, custom software solutions, software development company, software development services, software development agency, software development company, software development services, software development agency" />
         {/* Google tag (gtag.js) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-7CBBF8YY45"></script>
         <script dangerouslySetInnerHTML={{

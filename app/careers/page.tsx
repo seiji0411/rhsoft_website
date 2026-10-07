@@ -21,6 +21,7 @@ export const metadata: Metadata = {
   title: "Careers | RhSoft",
   description:
     "Join RhSoft — remote software roles in AI, blockchain, web, and e-commerce. Build production products with a high-trust studio.",
+  alternates: { canonical: "/careers" },
 }
 
 const perks = [

@@ -98,7 +98,7 @@ export function StatsSection() {
               className="bg-gradient-to-r from-brand-800 to-brand-600 hover:from-brand-900 hover:to-brand-700"
             >
               <Link href="/services">
-                Read more
+                Explore our services
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </Button>

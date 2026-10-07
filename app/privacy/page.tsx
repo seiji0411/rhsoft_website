@@ -21,6 +21,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy | RhSoft",
   description:
     "How RhSoft collects, uses, and protects personal data across our website and software development services.",
+  alternates: { canonical: "/privacy" },
 }
 
 const toc = [

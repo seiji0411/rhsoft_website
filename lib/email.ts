@@ -193,7 +193,7 @@ interface QuoteData {
 const FROM_EMAIL = process.env.FROM_EMAIL || "support@rhsoft.co.uk"
 const CONTACT_EMAIL = process.env.CONTACT_EMAIL || "contact@rhsoft.co.uk"
 const SALES_EMAIL = process.env.SALES_EMAIL || "support@rhsoft.co.uk"
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://rhsoft.co.uk"
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.rhsoft.co.uk"
 
 export async function sendContactNotification(data: ContactData): Promise<EmailResult> {
   try {

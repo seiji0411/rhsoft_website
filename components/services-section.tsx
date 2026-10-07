@@ -66,7 +66,9 @@ export function ServicesSection() {
                     variant="outline"
                     className="w-full mt-auto group-hover:bg-brand-800 group-hover:text-white transition-colors duration-300"
                   >
-                    <Link href={`/services#${service.slug}`}>Learn More</Link>
+                    <Link href={`/services#${service.slug}`}>
+                      Learn More<span className="sr-only"> about our {service.title} services</span>
+                    </Link>
                   </Button>
                 </CardContent>
               </Card>

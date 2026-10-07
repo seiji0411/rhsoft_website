@@ -17,6 +17,7 @@ export function generateMetadata({ params }: { params: { jobId: string } }): Met
   return {
     title: job ? `Apply: ${job.title} | RhSoft Careers` : "Apply | RhSoft Careers",
     description: job?.summary,
+    alternates: { canonical: `/careers/apply/${params.jobId}` },
   }
 }
 

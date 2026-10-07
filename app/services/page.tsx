@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Brain, Blocks, Globe, ShoppingCart, CheckCircle, ArrowRight, type LucideIcon } from "lucide-react"
 import Link from "next/link"
+import type { Metadata } from "next"
 import { services, type Service } from "@/lib/services"
 
 const serviceIcons: Record<Service["slug"], LucideIcon> = {
@@ -10,6 +11,12 @@ const serviceIcons: Record<Service["slug"], LucideIcon> = {
   blockchain: Blocks,
   web: Globe,
   ecommerce: ShoppingCart,
+}
+
+export const metadata: Metadata = {
+  title: "Services | RhSoft",
+  description: "AI, blockchain, web, and e-commerce development services from RhSoft — from idea to production.",
+  alternates: { canonical: "/services" },
 }
 
 export default function ServicesPage() {

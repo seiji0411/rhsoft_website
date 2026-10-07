@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   title: "Terms of Service | RhSoft",
   description:
     "Terms of service for RhSoft software development — AI, blockchain, web, and e-commerce engagements.",
+  alternates: { canonical: "/terms" },
 }
 
 const toc = [

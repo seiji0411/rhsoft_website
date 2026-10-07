@@ -4,6 +4,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Sitemap | RhSoft",
   description: "Sitemap of RhSoft website pages.",
+  alternates: { canonical: "/sitemap" },
 }
 
 const links = [

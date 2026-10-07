@@ -52,3 +52,21 @@ export const careerValues = [
     text: "Small team, direct access to clients, and room to own a stack end to end.",
   },
 ]
+
+export const availabilityOptions = [
+  "Immediately",
+  "Within 2 weeks",
+  "Within 1 month",
+  "More than 1 month",
+] as const
+
+export const disabilityOptions = ["Prefer not to say", "No", "Yes"] as const
+
+// Vercel rejects request bodies over ~4.5 MB, so keep resumes below that.
+export const RESUME_MAX_BYTES = 4 * 1024 * 1024
+
+export const RESUME_TYPES: Record<string, string> = {
+  "application/pdf": "pdf",
+  "application/msword": "doc",
+  "application/vnd.openxmlformats-officedocument.wordprocessingml.document": "docx",
+}

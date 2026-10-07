@@ -5,16 +5,8 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { MapPin, ArrowRight, Mail } from "lucide-react"
-import { jobs, type Job } from "@/lib/careers"
-
-function applyHref(job: Job) {
-  const subject = encodeURIComponent(`Application: ${job.title}`)
-  const body = encodeURIComponent(
-    `Hi RhSoft,\n\nI would like to apply for ${job.title} (${job.team}, ${job.type}).\n\nName:\nLocation:\nPortfolio / GitHub:\nLinkedIn:\n\nA short note on why I'm a fit:\n\n`,
-  )
-  return `mailto:support@rhsoft.co.uk?subject=${subject}&body=${body}`
-}
+import { MapPin, ArrowRight } from "lucide-react"
+import { jobs } from "@/lib/careers"
 
 export function CareersJobs() {
 
@@ -81,10 +73,10 @@ export function CareersJobs() {
                 </div>
                 <div className="mt-auto flex gap-2">
                   <Button asChild className="flex-1 bg-brand-800 hover:bg-brand-700 text-white">
-                    <a href={applyHref(job)}>
+                    <Link href={`/careers/apply/${job.id}`}>
                       Apply
-                      <Mail className="w-4 h-4 ml-2" />
-                    </a>
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Link>
                   </Button>
                   <Button asChild variant="outline" className="flex-1">
                     <Link href="/contact" className="bg-slate-600 dark:bg-slate-800 hover:bg-slate-800 dark:hover:bg-slate-700 text-white hover:text-white">

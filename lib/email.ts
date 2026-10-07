@@ -106,7 +106,27 @@ function isRetryableSmtpError(error: unknown) {
   return code === "ETIMEDOUT" || code === "ESOCKET" || code === "ECONNECTION"
 }
 
-async function sendEmail({ to, subject, html, text }: { to: string; subject: string; html: string; text: string }) {
+interface EmailAttachment {
+  filename: string
+  content: Buffer
+  contentType: string
+}
+
+async function sendEmail({
+  to,
+  subject,
+  html,
+  text,
+  replyTo,
+  attachments,
+}: {
+  to: string
+  subject: string
+  html: string
+  text: string
+  replyTo?: string
+  attachments?: EmailAttachment[]
+}) {
   const mailer = getTransporter()
   const smtpUser = process.env.SMTP_USER as string
   const fromEmail = process.env.FROM_EMAIL || smtpUser
@@ -114,11 +134,12 @@ async function sendEmail({ to, subject, html, text }: { to: string; subject: str
   const mail = {
     // Gmail app passwords can only send as the authenticated Gmail account (or a verified alias).
     from: `"RhSoft" <${smtpUser}>`,
-    replyTo: fromEmail,
+    replyTo: replyTo || fromEmail,
     to,
     subject,
     html,
     text,
+    attachments,
   }
 
   try {
@@ -232,6 +253,210 @@ export async function sendQuoteConfirmation(email: string, firstName: string, qu
     console.error("Error sending quote confirmation:", error)
     return { success: false, error: error instanceof Error ? error.message : "Unknown error" }
   }
+}
+
+export interface ApplicationData {
+  jobTitle: string
+  fullName: string
+  email: string
+  phone: string
+  technicalSkills: string
+  availability: string
+  disability: string
+  resumeFileName: string
+}
+
+const CAREERS_EMAIL = "support@rhsoft.co.uk"
+
+export async function sendApplicationNotification(
+  data: ApplicationData,
+  resume: EmailAttachment,
+): Promise<EmailResult> {
+  try {
+    await sendEmail({
+      to: CAREERS_EMAIL,
+      replyTo: data.email,
+      subject: `New Application: ${data.jobTitle} - ${data.fullName}`,
+      html: generateApplicationNotificationHTML(data),
+      text: generateApplicationNotificationText(data),
+      attachments: [resume],
+    })
+    return { success: true }
+  } catch (error) {
+    console.error("Error sending application notification:", error)
+    return { success: false, error: error instanceof Error ? error.message : "Unknown error" }
+  }
+}
+
+export async function sendApplicationConfirmation(data: ApplicationData): Promise<EmailResult> {
+  try {
+    await sendEmail({
+      to: data.email,
+      subject: `We received your application for ${data.jobTitle} - RhSoft`,
+      html: generateApplicationConfirmationHTML(data),
+      text: generateApplicationConfirmationText(data),
+    })
+    return { success: true }
+  } catch (error) {
+    console.error("Error sending application confirmation:", error)
+    return { success: false, error: error instanceof Error ? error.message : "Unknown error" }
+  }
+}
+
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;")
+}
+
+function generateApplicationNotificationHTML(data: ApplicationData): string {
+  const field = (label: string, value: string) => `
+    <div class="info-item">
+      <div class="label">${label}</div>
+      <div class="value">${escapeHtml(value).replace(/\n/g, "<br>")}</div>
+    </div>`
+
+  return `
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>New Job Application</title>
+      <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { background: linear-gradient(135deg, #3b82f6, #6366f1); color: white; padding: 30px; text-align: center; border-radius: 8px 8px 0 0; }
+        .content { background: #f8fafc; padding: 30px; border-radius: 0 0 8px 8px; }
+        .info-item { background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #3b82f6; margin-bottom: 12px; }
+        .label { font-weight: bold; color: #1e293b; margin-bottom: 5px; }
+        .value { color: #475569; }
+        .cta-button { display: inline-block; background: #3b82f6; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <div class="header">
+          <h1>📄 New Job Application</h1>
+          <p>${escapeHtml(data.jobTitle)}</p>
+        </div>
+        <div class="content">
+          ${field("👤 Full Name", data.fullName)}
+          ${field("📧 Email", data.email)}
+          ${field("📱 Phone", data.phone)}
+          ${field("🛠️ Technical Skills", data.technicalSkills)}
+          ${field("📅 Availability", data.availability)}
+          ${field("♿ Disability (voluntary self-identification)", data.disability)}
+          <p style="text-align: center; color: #64748b;">The resume (${escapeHtml(data.resumeFileName)}) is attached to this email.</p>
+          <p style="text-align: center; margin-top: 24px; color: #64748b;">
+            <strong>⏰ Received:</strong> ${new Date().toLocaleString("en-GB", { timeZone: "Europe/London" })} UK time
+          </p>
+        </div>
+      </div>
+    </body>
+    </html>
+  `
+}
+
+function generateApplicationConfirmationHTML(data: ApplicationData): string {
+  const firstName = escapeHtml(data.fullName.trim().split(/\s+/)[0])
+  const jobTitle = escapeHtml(data.jobTitle)
+
+  return `
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Application Received - RhSoft</title>
+      <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { background: linear-gradient(135deg, #3b82f6, #6366f1); color: white; padding: 40px; text-align: center; border-radius: 8px 8px 0 0; }
+        .content { background: #f8fafc; padding: 40px; border-radius: 0 0 8px 8px; }
+        .cta-button { display: inline-block; background: #3b82f6; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; margin: 20px 0; }
+        .contact-info { background: white; padding: 20px; border-radius: 6px; margin: 20px 0; }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <div class="header">
+          <h1>✅ Application Received!</h1>
+          <p>Thank you for applying to RhSoft</p>
+        </div>
+        <div class="content">
+          <p>Dear ${firstName},</p>
+
+          <p>Thank you for applying for the <strong>${jobTitle}</strong> position at RhSoft. We have received your application and resume, and our team will review them carefully.</p>
+
+          <p><strong>What happens next?</strong></p>
+          <ul>
+            <li>📋 We review every application, usually within 5 working days</li>
+            <li>📞 If your profile is a fit, we'll invite you to a 30-minute intro call</li>
+            <li>💻 Next comes a practical exercise or a walkthrough of something you've built</li>
+            <li>🎯 We decide quickly and let you know either way</li>
+          </ul>
+
+          <div class="contact-info">
+            <h3>Questions about your application?</h3>
+            <p>Just reply to this email or write to <strong>support@rhsoft.co.uk</strong>.</p>
+          </div>
+
+          <p>Best regards,<br>
+          <strong>The RhSoft Team</strong></p>
+
+          <p style="text-align: center; margin-top: 30px;">
+            <a href="${SITE_URL}/careers" class="cta-button">View Careers</a>
+          </p>
+        </div>
+      </div>
+    </body>
+    </html>
+  `
+}
+
+function generateApplicationNotificationText(data: ApplicationData): string {
+  return `
+New Job Application - ${data.jobTitle}
+
+Full Name: ${data.fullName}
+Email: ${data.email}
+Phone: ${data.phone}
+Availability: ${data.availability}
+Disability (voluntary self-identification): ${data.disability}
+
+Technical Skills:
+${data.technicalSkills}
+
+Resume: ${data.resumeFileName} (attached)
+
+Received: ${new Date().toLocaleString("en-GB", { timeZone: "Europe/London" })} UK time
+  `
+}
+
+function generateApplicationConfirmationText(data: ApplicationData): string {
+  const firstName = data.fullName.trim().split(/\s+/)[0]
+
+  return `
+Dear ${firstName},
+
+Thank you for applying for the ${data.jobTitle} position at RhSoft. We have received your application and resume, and our team will review them carefully.
+
+What happens next?
+- We review every application, usually within 5 working days
+- If your profile is a fit, we'll invite you to a 30-minute intro call
+- Next comes a practical exercise or a walkthrough of something you've built
+- We decide quickly and let you know either way
+
+Questions about your application? Just reply to this email or write to support@rhsoft.co.uk.
+
+Best regards,
+The RhSoft Team
+${SITE_URL}/careers
+  `
 }
 
 // HTML Email Templates
